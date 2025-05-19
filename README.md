@@ -82,13 +82,13 @@ Use `python-dotenv` to load it automatically in your scripts.
 
 ## 🚀 Usage Guidelines
 
-### 🔹 Run a Specific Topic-Country Crawler
+### 🔹 Run a Specific Topic-Country Crawler (Manually)
 
 ```bash
 python topics/health/crawl_us.py
 ```
 
-→ Generates `data/health_us.csv`
+→ Generates `data/health/2025/05/19/us.csv`
 
 ### 🔄 Crawl All Topics for All Countries
 
@@ -100,7 +100,7 @@ This script will:
 
 * Read supported country codes from `config/countries.yaml`
 * Discover all topic folders and matching crawler scripts
-* Run each crawler and write output to `data/{topic}_{code}.csv`
+* Run each crawler and write output to `data/{topic}/{yyyy}/{mm}/{dd}/{countryCode}.csv`
 
 ### 🧪 Run Tests
 
@@ -114,30 +114,34 @@ pytest tests/
 
 ```
 opendata/
-├── config/                      # Project-wide configs (e.g. country codes)
-│   └── countries.yaml
-├── core/                        # Shared utilities for crawling/parsing
-│   ├── html.py
+├── config/
+│   └── countries.yaml              # ISO codes and country metadata
+├── core/
+│   ├── html.py                     # Shared HTML parsing utilities
 │   ├── pdf.py
 │   └── excel.py
-├── data/                        # Output CSVs: {topic}_{countryCode}.csv
-│   ├── health_us.csv
-│   ├── health_cn.csv
-│   └── education_us.csv
-├── topics/                      # Crawler code grouped by topic
+├── data/
+│   └── health/
+│       └── 2025/
+│           └── 05/
+│               └── 19/
+│                   ├── us.csv
+│                   └── ja.csv
+├── topics/
 │   ├── health/
 │   │   ├── crawl_us.py
-│   │   └── crawl_cn.py
+│   │   └── crawl_ja.py
 │   └── education/
 │       └── crawl_us.py
-├── crawl_all.py                 # Script to run all available crawlers
+├── init.py                         # For first run
+├── crawl.py                        # Runs all crawlers daily
 ├── requirements.txt
-├── tests/                       # Unit/integration tests
+├── tests/
 ├── .env
-├── .gitignore
 └── .github/
     └── workflows/
-        └── crawl.yml            # GitHub Actions workflow
+        └── crawl.yml               # GitHub Action (runs daily)
+
 ```
 
 ---
@@ -168,7 +172,7 @@ Use this file to:
 
 ## 📏 Naming & Formatting Conventions
 
-* **CSV File Naming**: `data/{topic}_{countryCode}.csv`
+* **CSV File Naming**: `{countryCode}.csv`
 * **Crawler Script Naming**: `crawl_{countryCode}.py`
 * **Code Format**: `black`
 * **Linting**: `ruff`
@@ -181,7 +185,7 @@ Use this file to:
 
 1. Fork the repository
 2. Add or update a crawler script in `topics/<topic>/crawl_<countryCode>.py`
-3. Save output to `data/<topic>_<countryCode>.csv`
+3. Save output to `data/{topic}/{yyyy}/{mm}/{dd}/{countryCode}.csv`
 4. Ensure the file is under 100MB
 5. Open a PR and follow the review process
 
@@ -222,10 +226,10 @@ Open a GitHub Issue for:
 
 ## 🛣️ Roadmap
 
-* [x] Modular crawler per topic/country
-* [x] Standardized CSV naming `{topic}_{countryCode}.csv`
-* [x] Central `config/` folder for settings
-* [x] GitHub Actions automation
+* [ ] Modular crawler per topic/country
+* [ ] Standardized CSV naming `{topic}_{countryCode}.csv`
+* [ ] Central `config/` folder for settings
+* [ ] GitHub Actions automation
 * [ ] Web frontend for browsing datasets
 * [ ] Auto-documentation of available datasets
 * [ ] Language localization support
