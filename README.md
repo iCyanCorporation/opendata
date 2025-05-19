@@ -216,7 +216,7 @@ Open a GitHub Issue for:
 
 ### 📬 Maintainer
 
-**David** – [@iCyanCorporation](https://github.com/iCyanCorporation)
+[@iCyan](https://github.com/iCyanCorporation)
 
 ---
 
