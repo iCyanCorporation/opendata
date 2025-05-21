@@ -261,14 +261,101 @@ class DataCollector:
         Returns:
             A pandas DataFrame with the extracted data.
         """
+        # Extract CSV parsing options from extraction_config if available
+        csv_options = extraction_config.get('csv_options', {})
+        
+        # Default options
+        options = {
+            'delimiter': csv_options.get('delimiter', ','),
+            'encoding': csv_options.get('encoding', 'utf-8'),
+            'header': csv_options.get('header', 0),
+            'dtype': str,  # Use string data type for all columns to avoid type inference issues
+            'low_memory': False,  # Better for handling dynamic columns with varying types
+        }
+        
+        # Try with multiple approaches to maximize success
         try:
-            df = pd.read_csv(source['url'])
+            # Try reading with provided options first
+            logger.info(f"Reading CSV from {source['url']} with custom options")
+            try:
+                df = pd.read_csv(source['url'], **options)
+            except Exception as e:
+                logger.warning(f"Standard CSV parsing failed for {source['url']}: {e}, trying with flexible settings")
+                # Try with pandas default options if custom failed
+                df = pd.read_csv(source['url'])
             
             # Add source information
             df['Source'] = source.get('name', 'CSV')
             df['URL'] = source['url']
             
+            # Ensure all column names are strings
+            df.columns = df.columns.astype(str)
+            
+            # Apply additional transformations from extraction_config if specified
+            if 'columns' in extraction_config:
+                # Handle column renaming if specified
+                column_mapping = {}
+                for col_config in extraction_config['columns']:
+                    if 'original' in col_config and 'rename' in col_config:
+                        column_mapping[col_config['original']] = col_config['rename']
+                
+                if column_mapping:
+                    df = df.rename(columns=column_mapping)
+            
             return df
+        except pd.errors.ParserError:
+            # If parsing fails, try with more flexible settings
+            try:
+                logger.warning(f"Standard CSV parsing failed for {source['url']}, trying with error_bad_lines=False")
+                options['on_bad_lines'] = 'skip'  # In newer pandas, error_bad_lines is replaced with on_bad_lines
+                df = pd.read_csv(source['url'], **options)
+                
+                # Add source information
+                df['Source'] = source.get('name', 'CSV')
+                df['URL'] = source['url']
+                
+                # Ensure all column names are strings
+                df.columns = df.columns.astype(str)
+                
+                return df
+            except Exception as e:
+                logger.error(f"Error processing CSV with flexible settings from {source['url']}: {e}")
+                
+                # Final attempt with minimal expectations - try reading with Python's built-in csv module
+                try:
+                    import csv
+                    import io
+                    import requests
+                    
+                    logger.warning(f"Attempting final fallback with basic CSV module for {source['url']}")
+                    response = requests.get(source['url'])
+                    response.raise_for_status()
+                    
+                    csv_content = response.content.decode(options['encoding'], errors='replace')
+                    csv_reader = csv.reader(io.StringIO(csv_content), delimiter=options['delimiter'])
+                    
+                    # Extract headers from first row if header option is 0
+                    rows = list(csv_reader)
+                    if rows:
+                        if options['header'] == 0 and len(rows) > 0:
+                            headers = rows[0]
+                            data = rows[1:]
+                        else:
+                            # Generate column names if no header
+                            headers = [f"Column{i}" for i in range(len(rows[0]))]
+                            data = rows
+                        
+                        # Create DataFrame
+                        df = pd.DataFrame(data, columns=headers)
+                        
+                        # Add source information
+                        df['Source'] = source.get('name', 'CSV')
+                        df['URL'] = source['url']
+                        
+                        return df
+                except Exception as nested_e:
+                    logger.error(f"All CSV parsing attempts failed for {source['url']}: {nested_e}")
+                    return pd.DataFrame()
         except Exception as e:
             logger.error(f"Error processing CSV from {source['url']}: {e}")
             return pd.DataFrame()
@@ -356,7 +443,7 @@ class DataCollector:
             logger.error(f"Error processing source {source.get('id', 'unknown')}: {e}")
             return pd.DataFrame()
     
-    def process_config(self, config_path: str) -> Optional[Dict[str, pd.DataFrame]]:
+    def process_config(self, config_path: str) -> Dict[str, tuple]:
         """
         Process a configuration file.
         
@@ -364,65 +451,106 @@ class DataCollector:
             config_path: Path to the YAML configuration file.
             
         Returns:
-            Dictionary of source IDs and their corresponding DataFrames, or None on error.
+            Dictionary containing:
+            - 'results': Dict of source IDs and their corresponding DataFrames
+            - 'status': Dict of source names and their success status
         """
         try:
             config = self.load_yaml_config(config_path)
             if not config:
                 logger.error(f"Empty or invalid configuration in {config_path}")
-                return None
+                return {'results': {}, 'status': {}}
             
             metadata = config.get('metadata', {})
             sources = config.get('sources', [])
             
             if not sources:
                 logger.error(f"No sources defined in {config_path}")
-                return None
+                return {'results': {}, 'status': {}}
             
             results = {}
-            for source in sources:
-                source_id = source.get('id', source.get('name', f"source_{len(results)}"))
-                df = self.process_source(source, config_path)
-                
-                if not df.empty:
-                    # Add metadata columns
-                    for key, value in metadata.items():
-                        if key not in df.columns:
-                            df[key] = value
-                    
-                    results[source_id] = df
+            status = {}
             
-            return results
+            for source in sources:
+                source_name = source.get('name', f"source_{len(results)}")
+                source_id = source.get('id', source_name)
+                
+                try:
+                    df = self.process_source(source, config_path)
+                    
+                    if not df.empty:
+                        # Add metadata columns
+                        for key, value in metadata.items():
+                            if key not in df.columns:
+                                df[key] = value
+                        
+                        # Add source_name column to track which YAML source the data came from
+                        df['source_name'] = source_name
+                        
+                        # Ensure all column names are strings
+                        df.columns = df.columns.astype(str)
+                        
+                        results[source_id] = df
+                        status[source_name] = True
+                    else:
+                        status[source_name] = False
+                except Exception as e:
+                    logger.error(f"Error processing source {source_name}: {e}")
+                    status[source_name] = False
+            
+            return {'results': results, 'status': status}
         except Exception as e:
             logger.error(f"Error processing configuration {config_path}: {e}")
-            return None
+            return {'results': {}, 'status': {}}
     
-    def save_results(self, results: Dict[str, pd.DataFrame], config_path: str) -> List[str]:
+    def save_results(self, config_results: Dict, config_path: str) -> List[str]:
         """
         Save the results to CSV files.
         
         Args:
-            results: Dictionary of source IDs and their corresponding DataFrames.
+            config_results: Dictionary containing results and status from process_config
             config_path: Path to the YAML configuration file.
             
         Returns:
             List of paths to the saved files.
         """
+        results = config_results.get('results', {})
         if not results:
             logger.error("No results to save")
             return []
         
         try:
-            # Extract topic and country code from the configuration path
-            path_parts = Path(config_path).parts
-            topic_idx = next((i for i, part in enumerate(path_parts) if part == 'topics'), -1)
-            
-            if topic_idx == -1 or topic_idx + 2 >= len(path_parts):
-                logger.error(f"Invalid configuration path: {config_path}")
+            # Load the YAML config to get country_code from metadata
+            config = self.load_yaml_config(config_path)
+            if not config:
+                logger.error(f"Failed to load configuration for saving results: {config_path}")
                 return []
             
-            topic = path_parts[topic_idx + 1]
-            country_code = Path(path_parts[-1]).stem.lower()
+            # Get country_code from metadata section of the YAML file
+            metadata = config.get('metadata', {})
+            country_code = metadata.get('country_code', '').lower()
+            
+            # If country_code is not in metadata, extract from path as fallback
+            if not country_code:
+                path_parts = Path(config_path).parts
+                topic_idx = next((i for i, part in enumerate(path_parts) if part == 'topics'), -1)
+                
+                if topic_idx == -1 or topic_idx + 2 >= len(path_parts):
+                    logger.error(f"Invalid configuration path and no country_code in metadata: {config_path}")
+                    return []
+                
+                country_code = path_parts[topic_idx + 2].lower()
+            
+            # Extract topic from config or from path
+            topic = metadata.get('topic')
+            if not topic:
+                path_parts = Path(config_path).parts
+                topic_idx = next((i for i, part in enumerate(path_parts) if part == 'topics'), -1)
+                if topic_idx != -1 and topic_idx + 1 < len(path_parts):
+                    topic = path_parts[topic_idx + 1]
+                else:
+                    logger.error(f"Cannot determine topic from path or metadata: {config_path}")
+                    return []
             
             # Get current date for directory structure
             now = datetime.datetime.now()
@@ -434,8 +562,19 @@ class DataCollector:
             
             saved_files = []
             
-            # Main combined output
-            combined_df = pd.concat(results.values(), ignore_index=True) if len(results) > 1 else next(iter(results.values()))
+            # Main combined output - ensure all columns from all sources are included
+            # Use outer join to preserve all columns from all dataframes
+            combined_df = pd.concat(results.values(), ignore_index=True, sort=False, join='outer') if len(results) > 1 else next(iter(results.values()))
+            
+            # Convert all column names to strings to avoid any issues
+            combined_df.columns = combined_df.columns.astype(str)
+            
+            # Add id column (sequential number for each row)
+            combined_df.insert(0, 'id', range(1, len(combined_df) + 1))
+            
+            # Fill NaN values with empty strings for consistency in CSV
+            combined_df = combined_df.fillna('')
+            
             output_file = output_dir / f"{country_code}.csv"
             combined_df.to_csv(output_file, index=False)
             saved_files.append(str(output_file))
@@ -443,6 +582,11 @@ class DataCollector:
             # Separate outputs for each source (if multiple sources)
             if len(results) > 1:
                 for source_id, df in results.items():
+                    # Add id column (sequential number for each row)
+                    df.insert(0, 'id', range(1, len(df) + 1))
+                    
+                    # Fill NaN values with empty strings
+                    df = df.fillna('')
                     source_file = output_dir / f"{country_code}_{source_id}.csv"
                     df.to_csv(source_file, index=False)
                     saved_files.append(str(source_file))
