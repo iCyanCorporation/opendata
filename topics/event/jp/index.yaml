@@ -1,0 +1,25 @@
+# Configuration for Japan event data
+
+# Multiple data sources can be configured
+sources:
+  # ================================================
+  # Scraper sources
+  - name: "TOKYO　東京ソラマチ"
+    enabled: true
+    type: "scraper"
+    config: "tokyo-solamachi-jp.json"
+  - name: "My Tokyo"
+    enabled: true
+    type: "scraper"
+    config: "www-my-metro-tokyo-lg-jp.json"
+
+  # ================================================
+  # API sources with external configuration files
+  - name: "Doorkeeper Events API"
+    enabled: true
+    type: "api"
+    config: "doorkeeper.json"
+  # - name: "Connpass Events API"
+  #   enabled: false
+  #   type: "api"
+  #   config: "connpass.json"

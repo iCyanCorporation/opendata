@@ -1,0 +1,25 @@
+{
+  "url": "https://api.doorkeeper.jp/events",
+  "api_key": "",
+  "method": "GET",
+  "sleep_time": 1.0,
+  "extraction": {
+    "headers": {
+      "Accept": "application/json"
+    },
+    "params": {
+      "locale": "en",
+      "since": "2023-01-01"
+    },
+    "columns": [
+      "title",
+      "starts_at",
+      "ends_at",
+      "venue_name",
+      "address",
+      "description",
+      "public_url",
+      "published_at"
+    ]
+  }
+}

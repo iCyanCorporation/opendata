@@ -1,6 +1,9 @@
-# Data Collection Status - 2025-05-21 14:06:24
+# Data Collection Status - 2025-05-21 15:51:54
 
 ## event
-### JA
+### JP
 [O] TOKYO　東京ソラマチ
+[O] My Tokyo
+[O] Doorkeeper Events API
+[X] Connpass Events API
 

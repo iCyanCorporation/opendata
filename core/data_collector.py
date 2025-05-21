@@ -10,6 +10,7 @@ import json
 import pandas as pd
 import datetime
 import logging
+import traceback
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Union
 
@@ -18,6 +19,7 @@ from .html import fetch_html, parse_html, extract_table, extract_data_by_selecto
 from .pdf import fetch_pdf, extract_text_pdfplumber, extract_tables_pdfplumber
 from .excel import fetch_excel, read_excel_file
 from .scraper import WebScraper
+from .api import fetch_api_data, process_api_response
 
 # Configure logging
 logging.basicConfig(
@@ -360,6 +362,121 @@ class DataCollector:
             logger.error(f"Error processing CSV from {source['url']}: {e}")
             return pd.DataFrame()
     
+    def process_api_source(self, source: Dict, extraction_config: Dict) -> pd.DataFrame:
+        """
+        Process an API source.
+        
+        Args:
+            source: Source configuration dictionary.
+            extraction_config: Extraction configuration dictionary.
+            
+        Returns:
+            A pandas DataFrame with the extracted data.
+        """
+        # Extract API request options
+        url = source.get('url')
+        api_key = source.get('api_key')
+        method = source.get('method', 'GET')
+        sleep_time = source.get('sleep_time', 0.0)  # Get sleep time from config, default to 0
+        
+        # Get headers, params, and payload from extraction config
+        headers = extraction_config.get('headers', {})
+        params = extraction_config.get('params', {})
+        payload = extraction_config.get('payload', {})
+        
+        logger.info(f"Fetching data from API: {url}")
+        
+        try:
+            # Fetch data from the API
+            response_data = fetch_api_data(
+                url=url,
+                api_key=api_key,
+                headers=headers,
+                params=params,
+                method=method,
+                payload=payload,
+                sleep_time=sleep_time
+            )
+            
+            if not response_data:
+                logger.error(f"Failed to fetch data from API: {url}")
+                return pd.DataFrame()
+            
+            # Add verbose logging to help diagnose API response handling
+            if isinstance(response_data, list):
+                logger.info(f"API response is a list with {len(response_data)} items")
+                if response_data and isinstance(response_data[0], dict):
+                    logger.info(f"First item keys: {list(response_data[0].keys())}")
+                    if 'event' in response_data[0]:
+                        logger.info("Doorkeeper API format detected")
+            elif isinstance(response_data, dict):
+                logger.info(f"API response is a dictionary with keys: {list(response_data.keys())}")
+            
+            # Save the raw API response for debugging
+            import os
+            import json
+            from datetime import datetime
+            
+            try:
+                debug_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "debug")
+                os.makedirs(debug_dir, exist_ok=True)
+                debug_file = os.path.join(debug_dir, f"api_response_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
+                with open(debug_file, 'w') as f:
+                    json.dump(response_data, f, indent=2)
+                logger.info(f"Saved raw API response to {debug_file}")
+            except Exception as e:
+                logger.warning(f"Could not save debug file: {e}")
+            
+            # Process the API response
+            df = process_api_response(response_data, extraction_config)
+            
+            if df.empty:
+                logger.warning(f"API response processing returned empty DataFrame for {url}")
+                return pd.DataFrame()
+            
+            logger.info(f"API data processed successfully. DataFrame shape: {df.shape}")
+            logger.info(f"DataFrame columns: {df.columns.tolist()}")
+            
+            # Add source information if not already present
+            if 'Source' not in df.columns:
+                df['Source'] = source.get('name', 'API')
+            if 'URL' not in df.columns:
+                df['URL'] = url
+            
+            # Handle ID column conflicts by renaming it
+            if 'id' in df.columns:
+                df.rename(columns={'id': 'source_id'}, inplace=True)
+            
+            # Rename any columns according to the project's standard format
+            columns_to_rename = {
+                'title': 'title',
+                'starts_at': 'datetime',
+                'description': 'description',
+                'address': 'address',
+                'venue_name': 'venue',
+                'public_url': 'url',
+                'published_at': 'published_at'
+            }
+            
+            # Apply column renaming where columns exist
+            for old_col, new_col in columns_to_rename.items():
+                if old_col in df.columns and old_col != new_col:
+                    df[new_col] = df[old_col]
+            
+            # Ensure required columns exist
+            required_columns = ['title', 'datetime', 'description', 'url']
+            for col in required_columns:
+                if col not in df.columns:
+                    logger.warning(f"Required column '{col}' not found in API data")
+                    df[col] = ""  # Add empty column for missing required fields
+            
+            return df
+        except Exception as e:
+            logger.error(f"Error processing API source {url}: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            return pd.DataFrame()
+    
     def process_source(self, source: Dict, config_path: str = None) -> pd.DataFrame:
         """
         Process a data source based on its type.
@@ -385,14 +502,33 @@ class DataCollector:
             config_dir = os.path.dirname(config_path)
             config_file_path = os.path.join(config_dir, config_file)
             
-            # Load the scraper config if it exists
+            # Load the config if it exists
             if os.path.exists(config_file_path):
                 try:
-                    with open(config_file_path, 'r') as f:
-                        scraper_config = json.load(f)
-                    extraction_config.update(scraper_config.get('extraction', {}))
+                    # Handle different file types (JSON, YAML)
+                    if config_file.endswith('.json'):
+                        with open(config_file_path, 'r') as f:
+                            external_config = json.load(f)
+                    elif config_file.endswith('.yaml') or config_file.endswith('.yml'):
+                        with open(config_file_path, 'r') as f:
+                            external_config = yaml.safe_load(f)
+                    else:
+                        logger.warning(f"Unknown config file type: {config_file}")
+                        external_config = {}
+                    
+                    # Update source and extraction config based on the file type
+                    if source_type == 'scraper':
+                        extraction_config.update(external_config.get('extraction', {}))
+                    elif source_type == 'api':
+                        # For API configs, all top-level fields except certain ones go to source
+                        for key, value in external_config.items():
+                            if key == 'extraction':
+                                extraction_config.update(value)
+                            elif key not in ['sources', 'metadata', 'name', 'enabled', 'type', 'config']:
+                                source[key] = value
                 except Exception as e:
-                    logger.error(f"Error loading scraper config {config_file_path}: {e}")
+                    logger.error(f"Error loading config {config_file_path}: {e}")
+                    logger.error(traceback.format_exc())
         
         logger.info(f"Processing {source_type} source: {source.get('name', source.get('url', 'Unknown'))}")
         
@@ -405,6 +541,8 @@ class DataCollector:
                 return self.process_excel_source(source, extraction_config)
             elif source_type == 'csv':
                 return self.process_csv_source(source, extraction_config)
+            elif source_type == 'api':
+                return self.process_api_source(source, extraction_config)
             elif source_type == 'scraper':
                 # For the custom scraper type, ensure we have a config
                 if not config_file:
@@ -579,17 +717,17 @@ class DataCollector:
             combined_df.to_csv(output_file, index=False)
             saved_files.append(str(output_file))
             
-            # Separate outputs for each source (if multiple sources)
-            if len(results) > 1:
-                for source_id, df in results.items():
-                    # Add id column (sequential number for each row)
-                    df.insert(0, 'id', range(1, len(df) + 1))
-                    
-                    # Fill NaN values with empty strings
-                    df = df.fillna('')
-                    source_file = output_dir / f"{country_code}_{source_id}.csv"
-                    df.to_csv(source_file, index=False)
-                    saved_files.append(str(source_file))
+            # Separate outputs for each source (if multiple sources) - disabled
+            # if len(results) > 1:
+            #     for source_id, df in results.items():
+            #         # Add id column (sequential number for each row)
+            #         df.insert(0, 'id', range(1, len(df) + 1))
+            #         
+            #         # Fill NaN values with empty strings
+            #         df = df.fillna('')
+            #         source_file = output_dir / f"{country_code}_{source_id}.csv"
+            #         df.to_csv(source_file, index=False)
+            #         saved_files.append(str(source_file))
             
             logger.info(f"Saved {len(saved_files)} files")
             return saved_files

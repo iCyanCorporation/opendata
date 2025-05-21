@@ -187,6 +187,95 @@ opendata/
 
 ---
 
+## 📂 Configuration Reference
+
+### Data Source Types
+
+The system supports the following data source types, which can be specified in the `type` field of a source configuration:
+
+1. **HTML** (`type: "html"`): Parse HTML pages and extract data using selectors
+2. **PDF** (`type: "pdf"`): Extract text and tables from PDF documents
+3. **Excel** (`type: "excel"`): Extract data from Excel spreadsheets
+4. **CSV** (`type: "csv"`): Parse CSV files
+5. **Scraper** (`type: "scraper"`): Use a custom scraper configuration (in JSON format)
+6. **API** (`type: "api"`): Fetch data from REST APIs with authentication, custom headers, and parameters
+
+### API Source Configuration
+
+API sources can be configured with the following properties:
+
+```yaml
+- name: "Example API"
+  enabled: true
+  type: "api"
+  # Reference an external configuration file (recommended)
+  config: "example-api.yaml"
+
+  # OR define inline configuration (not recommended for complex APIs)
+  # url: "https://api.example.com/data"
+  # api_key: "your_api_key"
+  # method: "GET"
+  # extraction:
+  #   headers:
+  #     Accept: "application/json"
+  #   params:
+  #     limit: 100
+  #   columns: ["id", "name", "value"]
+```
+
+### External Configuration Files
+
+To keep the main `index.yaml` file clean and manageable, you can use external configuration files for complex sources like APIs. These files can be in YAML or JSON format and are referenced using the `config` property.
+
+**Example API Configuration File (`doorkeeper.yaml`):**
+
+```yaml
+# API source configuration
+url: "https://api.doorkeeper.jp/events"
+api_key: "" # API key if required
+method: "GET"
+
+# Extraction configuration
+extraction:
+  # Request configuration
+  headers:
+    Accept: "application/json"
+
+  # Query parameters
+  params:
+    locale: "en"
+    since: "2023-01-01"
+
+  # Optional data path (to navigate nested responses)
+  # data_path: "results"
+
+  # Columns to extract
+  columns:
+    ["title", "starts_at", "ends_at", "venue_name", "address", "description"]
+
+  # Optional filters
+  filters:
+    - column: "starts_at"
+      operator: ">"
+      value: "2023-06-01"
+```
+
+**Available API Configuration Options:**
+
+| Option                 | Description                                            |
+| ---------------------- | ------------------------------------------------------ |
+| `url`                  | API endpoint URL                                       |
+| `api_key`              | API key for authentication                             |
+| `method`               | HTTP method (GET, POST, PUT, etc.)                     |
+| `extraction.headers`   | HTTP headers to send with the request                  |
+| `extraction.params`    | Query parameters for the request                       |
+| `extraction.payload`   | Data payload for POST/PUT requests                     |
+| `extraction.data_path` | Path to navigate nested JSON responses                 |
+| `extraction.columns`   | List of columns to extract from the response           |
+| `extraction.filters`   | Filters to apply to the data (column, operator, value) |
+
+---
+
 ## 📁 `config/` Folder Details
 
 ### `countries.yaml`
@@ -242,7 +331,19 @@ sources:
     enabled: true
     type: "excel"
     url: "https://www.mhlw.go.jp/english/database/excel/health_insurance_2023.xlsx"
+
+  - name: "Doorkeeper Events API"
+    enabled: true
+    type: "api"
+    url: "https://api.doorkeeper.jp/events"
+    api_key: "your_api_key_here" # Optional: API key for authentication
+    method: "GET" # Optional: HTTP method (GET by default)
+    extraction:
+      data_path: "events" # Optional: Path to extract data from in the JSON response
+      columns: ["title", "starts_at", "ends_at", "venue_name"] # Optional: Columns to keep
 ```
+
+````
 
 ### Source Types and Required Fields
 
@@ -251,17 +352,74 @@ Each source in the YAML configuration has the following structure:
 ```yaml
 - name: "Source Name"
   enabled: true|false # Whether this source should be processed
-  type: "html|pdf|excel|csv"
+  type: "html|pdf|excel|csv|api|scraper"
   url: "https://example.com/data-source"
+````
+
+| Source Type | Description                                                   |
+| ----------- | ------------------------------------------------------------- |
+| `html`      | For crawling a HTML page using BeautifulSoup                  |
+| `scraper`   | For crawling pages using Scrapy as webs craper                |
+| `pdf`       | For extracting data from PDF files using pdfplumber/PyMuPDF   |
+| `excel`     | For processing Excel spreadsheets using pandas                |
+| `csv`       | For direct CSV downloads processed by pandas                  |
+| `api`       | For fetching data from REST APIs with optional authentication |
+
+### API Source Configuration
+
+For API sources, additional configuration options are available:
+
+```yaml
+- name: "API Source Name"
+  enabled: true
+  type: "api"
+  url: "https://api.example.com/endpoint"
+  api_key: "your_api_key_here" # Optional: API key for authentication
+  method: "GET" # Optional: HTTP method (GET, POST, etc.)
+  extraction:
+    # Specify the path to extract data from in the JSON response
+    data_path: "results.items" # Optional: Use dot notation for nested paths
+
+    # Optional: Headers to send with the request
+    headers:
+      Accept: "application/json"
+      User-Agent: "opendata-crawler/1.0"
+
+    # Optional: Query parameters for the request
+    params:
+      limit: 100
+      page: 1
+
+    # Optional: Data payload for POST/PUT requests
+    payload:
+      query: "search term"
+
+    # Optional: Filter the data
+    filters:
+      - column: "status"
+        operator: "==" # Supported: ==, !=, >, <, contains
+        value: "active"
+
+    # Optional: Select specific columns to keep
+    columns: ["id", "name", "date"]
 ```
 
-| Source Type | Description                                                 |
-| ----------- | ----------------------------------------------------------- |
-| `html`      | For crawling a HTML page using BeautifulSoup                |
-| `scraper`   | For crawling pages using Scrapy as webs craper              |
-| `pdf`       | For extracting data from PDF files using pdfplumber/PyMuPDF |
-| `excel`     | For processing Excel spreadsheets using pandas              |
-| `csv`       | For direct CSV downloads processed by pandas                |
+Example for Doorkeeper API:
+
+```yaml
+- name: "Doorkeeper Events API"
+  enabled: true
+  type: "api"
+  url: "https://api.doorkeeper.jp/events"
+  api_key: "your_api_key_here"
+  extraction:
+    headers:
+      Accept: "application/json"
+    params:
+      locale: "en"
+    data_path: "events"
+    columns: ["title", "starts_at", "ends_at", "venue_name", "address"]
+```
 
 ---
 
