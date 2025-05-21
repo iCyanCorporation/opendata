@@ -60,7 +60,7 @@ Public data is fragmented across formats, languages, and domains. This project *
 
 ### 🔧 Prerequisites
 
-- Python 3.11+
+- Python 3.9+
 - Git
 - (Optional) Virtual environment: `venv` or `poetry`
 
