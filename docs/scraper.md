@@ -134,6 +134,7 @@ Fields specific to event data:
 | `application_method` | String    | How to apply for the event               | `"Apply via website or call directly"` |
 | `target_audience`    | String    | Target audience or participants          | `"Parents with children ages 5-12"`    |
 | `event_format`       | String    | Whether the event is in-person or online | `"online"`, `"offline"`, `"hybrid"`    |
+| `agenda`             | Array     | Detailed schedule with time slots        | See example below                      |
 
 ## Technical Fields
 
@@ -183,12 +184,44 @@ Fields for technical metadata:
   "participant_limit": 200,
   "application_method": "Registration required on the website",
   "target_audience": "University administrators and education researchers",
-  "event_format": "hybrid"
+  "event_format": "hybrid",
+  "agenda": [
+    {
+      "start_time": "16:00",
+      "end_time": "16:05",
+      "title": "オープニング",
+      "description": ""
+    },
+    {
+      "start_time": "16:05",
+      "end_time": "16:20",
+      "title": "スマートファクトリー導入のステップを知る",
+      "description": ""
+    },
+    {
+      "start_time": "16:20",
+      "end_time": "16:40",
+      "title": "導入事例に学ぶ、成功の勘所",
+      "description": ""
+    },
+    {
+      "start_time": "16:40",
+      "end_time": "16:55",
+      "title": "スマートファクトリー実現に向けた最初の一手",
+      "description": ""
+    },
+    {
+      "start_time": "16:55",
+      "end_time": "17:00",
+      "title": "クロージング",
+      "description": ""
+    }
+  ]
 }
 ```
 
 ### CSV Headers Example
 
 ```
-id,source_name,source_url,event_time,country_code,topic,language,status,meeting_address,lecturer,organizer,price,participant_limit,application_method,target_audience,event_format
+id,source_name,source_url,event_time,country_code,topic,language,status,meeting_address,lecturer,organizer,price,participant_limit,application_method,target_audience,event_format,agenda
 ```
