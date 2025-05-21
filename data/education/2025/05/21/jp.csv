@@ -1,148 +1,284 @@
-id,category,subcategory,prod-link,name,price,description,image,Source,country_code,topic,source_name
-1,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/60,Asus VivoBook X441NA-GA190,$295.99,"Asus VivoBook X441NA-GA190 Chocolate Black, 14"", Celeron N3450, 4GB, 128GB SSD, Endless OS, ENG kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-2,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/61,Prestigio SmartBook 133S Dark Grey,$299,"Prestigio SmartBook 133S Dark Grey, 13.3"" FHD IPS, Celeron N3350 1.1GHz, 4GB, 32GB, Windows 10 Pro + Office 365 1 gadam",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-3,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/62,Prestigio SmartBook 133S Gold,$299,"Prestigio SmartBook 133S Gold, 13.3"" FHD IPS, Celeron N3350 1.1GHz, 4GB, 32GB, Windows 10 Pro + Office 365 1 gadam",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-4,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/32,Aspire E1-510,$306.99,"15.6"", Pentium N3520 2.16GHz, 4GB, 500GB, Linux",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-5,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/63,Lenovo V110-15IAP,$321.94,"Lenovo V110-15IAP, 15.6"" HD, Celeron N3350 1.1GHz, 4GB, 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-6,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/64,Lenovo V110-15IAP,$356.49,"Asus VivoBook 15 X540NA-GQ008T Chocolate Black, 15.6"" HD, Pentium N4200, 4GB, 500GB, Windows 10 Home, En kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-7,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/65,Hewlett Packard 250 G6 Dark Ash Silver,$364.46,"Hewlett Packard 250 G6 Dark Ash Silver, 15.6"" HD, Celeron N3060 1.6GHz, 4GB, 128GB SSD, DOS",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-8,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/66,Acer Aspire 3 A315-31 Black,$372.7,"Acer Aspire 3 A315-31 Black, 15.6"" HD, Celeron N3350 1.1GHz, 4GB, 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-9,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/67,Acer Aspire A315-31-C33J,$379.94,"Acer Aspire A315-31-C33J Black 15.6"", HD, Celeron N3350, 4GB DDR3L, 128GB, Windows 10 Home, ENG",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-10,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/68,Acer Aspire ES1-572 Black,$379.95,"Acer Aspire ES1-572 Black, 15.6"" HD, Core i3-6006U, 4GB, 128GB SSD, Linux",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-11,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/69,Acer Aspire 3 A315-31 Black,$391.48,"Acer Aspire 3 A315-31 Black, 15.6"" HD, Pentium N4200 1.1GHz, 4GB, 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-12,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/70,Acer Aspire 3 A315-21,$393.88,"Acer Aspire 3 A315-21, 15.6"", AMD A4-9120. 4GB. 128GB SSD, Linux",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-13,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/45,Asus VivoBook Max,$399,"Asus VivoBook Max X541NA-GQ041 Black Chocolate, 15.6"" HD, Pentium N4200 1.1GHz, 4GB, 500GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-14,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/71,Asus VivoBook E502NA-GO022T Dark Blue,$399.99,"Asus VivoBook E502NA-GO022T Dark Blue, 15.6"" HD, Pentium N4200 1.1GHz, 4GB, 128GB SSD, Windows 10 Home, En/Ru kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-15,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/72,Lenovo ThinkPad E31-80,$404.23,"Lenovo ThinkPad E31-80, 13.3"" HD, Celeron 3855U 1.6GHz, 4GB, 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-16,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/73,Acer Aspire 3 A315-31 Black,$408.98,"Acer Aspire 3 A315-31 Black, 15.6"" HD, Pentium N4200 1.1GHz, 4GB, 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-17,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/74,Lenovo V110-15ISK,$409.63,"Lenovo V110-15ISK, 15.6"" HD, Core i3-6006U, 8GB, 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-18,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/75,Acer Aspire ES1-732 Black,$410.46,"Acer Aspire ES1-732 Black, 17.3"" HD+, Celeron, N3350, 4GB, 1TB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-19,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/76,Asus VivoBook 15 X540NA-GQ026T,$410.66,"Asus VivoBook 15 X540NA-GQ026T Chocolate Black, 15.6"" HD, Pentium N4200, 4GB, 128GB SSD, Windows 10 Home, En/Ru kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-20,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/31,Packard 255 G2,$416.99,"15.6"", AMD E2-3800 1.3GHz, 4GB, 500GB, Windows 8.1",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-21,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/77,Asus EeeBook R416NA-FA014T,$433.3,"Asus EeeBook R416NA-FA014T, 14"" FHD, Pentium N4200, 4GB, 128GB eMMC, Windows 10 Home, Eng kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-22,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/78,Acer Aspire 3 A315-51,$436.29,"Acer Aspire 3 A315-51, 15.6"" HD, Core i3-6006U, 4GB, 1TB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-23,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/79,Acer Aspire ES1-572 Black,$436.29,"Acer Aspire ES1-572 Black, 15.6"" HD, Core i3-6006U, 4GB, 500GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-24,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/80,Acer Extensa 15 (2540) Black,$439.73,"Acer Extensa 15 (2540) Black, 15.6"" HD, Core i5-7200U, 4GB, 500GB, Linux",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-25,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/81,Acer Aspire ES1-572 Black,$454.62,"Acer Aspire ES1-572 Black, 15.6"" HD, Core i5-7200U, 4GB, 500GB, Linux",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-26,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/82,Lenovo V110-15ISK,$454.73,"Lenovo V110-15ISK, 15.6"" HD, Core i3-6006U, 4GB, 128GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-27,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/83,Acer Aspire A315-51-33TG,$457.38,"Acer Aspire A315-51-33TG, Black 15.6"" HD, Core i3-7100U, 4GB DDR4, 128GB SSD, Windows 10 Home, ENG",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-28,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/84,Lenovo V110-15IKB,$465.95,"Lenovo V110-15IKB, 15.6"" HD, Core i5-7200U, 4GB, 500GB, DOS",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-29,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/85,Asus VivoBook 15 X540UA-DM260 Chocolate Black,$468.56,"Asus VivoBook 15 X540UA-DM260 Chocolate Black, 15.6"" FHD, Core i3-6006U, 4GB, 256GB SSD, Endless OS, En kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-30,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/86,Acer Aspire ES1-572 Black,$469.1,"Acer Aspire ES1-572 Black, 15.6"" HD, Core i3-6006U, 4GB, 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-31,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/87,Lenovo V510 Black,$484.23,"Lenovo V510 Black, 14"" HD, Core i3-6006U, 4GB, 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-32,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/88,Acer Aspire ES1-572 Black,$485.9,"Acer Aspire ES1-572 Black, 15.6"" HD, Core i5-7200U, 4GB, 128GB SSD, Linux",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-33,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/89,Lenovo V510 Black,$487.8,"Lenovo V510 Black, 15.6"" HD, Core i3-6006U, 4GB, 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-34,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/90,Acer Swift 1 SF113-31 Silver,$488.64,"Acer Swift 1 SF113-31 Silver, 13.3"" FHD, Pentium N4200, 4GB, 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-35,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/46,Dell Vostro 15,$488.78,"Dell Vostro 15 (3568) Black, 15.6"" FHD, Core i5-7200U, 4GB, 128GB SSD, Radeon R5 M420 2GB, Linux",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-36,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/91,Acer Aspire 3 A315-51 Black,$494.71,"Acer Aspire 3 A315-51 Black, 15.6"" FHD, Core i3-7100U, 4GB, 500GB + 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-37,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/92,Dell Vostro 15 (3568) Red,$497.17,"Dell Vostro 15 (3568) Red, 15.6"" HD, Core i5-7200U, 4GB, 1TB, Radeon R5 M420 2GB, Linux",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-38,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/93,Lenovo V510 Black,$498.23,"Lenovo V510 Black, 15.6"" FHD, Core i3-7100U, 4GB, 128GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-39,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/42,HP 250 G3,$520.99,"15.6"", Core i5-4210U, 4GB, 500GB, Windows 8.1",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-40,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/47,Acer Spin 5,$564.98,"Acer Spin 5 SP513-51 Black, 13.3"" FHD Touch, Core i3-7100U, 4GB, 128GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-41,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/44,HP 350 G1,$577.99,"15.6"", Core i5-4200U, 4GB, 750GB, Radeon HD8670M 2GB, Windows",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-42,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/36,Aspire E1-572G,$581.99,"15.6"", Core i5-4200U, 8GB, 1TB, Radeon R7 M265, Windows 8.1",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-43,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/38,Pavilion,$609.99,"15.6"", Core i5-4200U, 6GB, 750GB, Windows 8.1",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-44,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/48,Acer Aspire A515-51-5654,$679,"Acer Aspire A515-51-5654, Black, 15.6"", FHD, Core i5-8250U, 8GB DDR4, 256GB SSD, Windows 10 Home, ENG",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-45,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/49,Dell Inspiron 15,$679,"Dell Inspiron 15 (5567) Fog Gray, 15.6"" FHD, Core i5-7200U, 8GB, 1TB, Radeon R7 M445 4GB, Linux",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-46,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/50,Asus VivoBook S14,$729,"Asus VivoBook S14 (S406UA-BV041T) Starry Grey, 14"", Core i5-8250U, 8GB, 256GB SSD, Windows 10 Home, Eng kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-47,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/34,ProBook,$739.99,"14"", Core i5 2.6GHz, 4GB, 500GB, Win7 Pro 64bit",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-48,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/39,Inspiron 15,$745.99,"Moon Silver, 15.6"", Core i7-4510U, 8GB, 1TB, Radeon HD R7 M265 2GB,",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-49,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/51,Asus ROG STRIX GL553VD-DM256,$799,"Asus ROG STRIX GL553VD-DM256, 15.6"" FHD, Core i5-7300HQ, 8GB, 1TB, GeForce GTX 1050 2GB, No OS",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-50,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/52,Acer Nitro 5 AN515-51,$809,"Acer Nitro 5 AN515-51, 15.6"" FHD IPS, Core i5-7300HQ, 8GB, 1TB, GeForce GTX 1050 2GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-51,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/53,Asus ROG STRIX GL553VD-DM256,$899,"Asus ROG STRIX GL553VD-DM256, 15.6"" FHD, Core i5-7300HQ, 8GB, 1TB, GeForce GTX 1050 2GB, No OS + Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-52,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/54,Lenovo ThinkPad L570,$999,"Lenovo ThinkPad L570, 15.6"" FHD, Core i7-7500U, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-53,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/37,ThinkPad Yoga,$1033.99,"12.5"" Touch, Core i3-4010U, 4GB, 500GB + 16GB SSD Cache,",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-54,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/94,Lenovo ThinkPad L460,$1096.02,"Lenovo ThinkPad L460, 14"" FHD IPS, Core i7-6600U, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-55,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/95,Dell Inspiron 15 (7567) Black,$1098.42,"Dell Inspiron 15 (7567) Black, 15.6"" FHD, Core i5-7300HQ, 8GB, 256GB SSD, GeForce GTX 1050 4GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-56,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/96,MSI GL72M 7RDX,$1099,"MSI GL72M 7RDX, 17.3"" FHD, Core i5-7300HQ, 8GB, 1TB + 128GB SSD, GeForce GTX 1050 2GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-57,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/97,MSI GL72M 7RDX,$1099,"Asus ROG Strix GL553VD-DM535T, 15.6"" FHD, Core i7-7700HQ, 8GB, 1TB + 128GB SSD, GeForce GTX 1050 2GB, Windows 10 Home, Eng kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-58,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/98,Asus ROG Strix GL553VD-DM535T,$1101.83,"Apple MacBook Air 13.3"", Core i5 1.8GHz, 8GB, 128GB SSD, Intel HD 4000, RUS",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-59,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/99,Dell Latitude 5280,$1102.66,"Dell Latitude 5280, 12.5"" HD, Core i5-7300U, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-60,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/100,Dell Latitude 5480,$1110.14,"Dell Latitude 5480, 14"" FHD, Core i5-7300U, 8GB, 500GB, Linux + Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-61,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/101,Lenovo Legion Y520-15IKBM,$1112.91,"Lenovo Legion Y520-15IKBM, Black, 15.6"" FHD IPS, Core i5-7300HQ, 8 GB, 128GB SSD + 2 TB HDD, NVIDIA GeForce GTX 1060 6 GB, FreeDOS + Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-62,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/102,Toshiba Portege Z30-C-16J Grey,$1114.55,"Toshiba Portege Z30-C-16J Grey, 13.3"" FHD, Core i5-6200U, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-63,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/103,Acer Predator Helios 300 (PH317-51),$1123.87,"Acer Predator Helios 300 (PH317-51), 17.3"" FHD IPS, Core i5-7300HQ, 8GB, 1TB + 128GB SSD, GeForce GTX 1050Ti 4GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-64,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/104,Acer Aspire 7 A715-71G,$1123.87,"Acer Aspire 7 A715-71G, 15.6"" FHD IPS, Core i7-7700HQ, 8GB, 128GB SSD + 1TB HDD, GTX 1050 Ti 4GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-65,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/105,Dell Inspiron 17 2in1 (7779) Silver,$1124.2,"Dell Inspiron 17 2in1 (7779) Silver, 17.3"" FHD Touch, Core i5-7200U, 12GB, 1TB, GeForce GT940MX 2GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-66,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/106,Dell Latitude 5480,$1133.82,"Dell Latitude 5480, 14"" FHD, Core i5-7300U, 8GB, 500GB, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-67,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/107,Lenovo Legion Y520,$1133.91,"Lenovo Legion Y520, 15.6"" FHD, Core i7-7700HQ, 8GB, 128 GB SSD + 1TB HDD, GTX 1050 4GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-68,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/108,Asus AsusPro Advanced BU401LA-FA271G Dark Grey,$1139.54,"Asus AsusPro Advanced BU401LA-FA271G Dark Grey, 14"", Core i5-4210U, 4GB, 128GB SSD, Win7 Pro 64bit, ENG",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-69,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/109,Acer Nitro 5 AN515-51,$1140.62,"Acer Nitro 5 AN515-51, 15.6"" FHD IPS, Core i7-7700HQ, 8GB, 256GB SSD +1TB, GeForce GTX 1050 Ti 4GB, Windows 10 Home + Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-70,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/110,Dell Latitude 5480,$1143.4,"Dell Latitude 5480, 14"" FHD, Core i5-7440HQ, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-71,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/111,Dell Inspiron 15 (7567) Black,$1144.2,"Dell Inspiron 15 (7567) Black, 15.6"" FHD, Core i7-7700HQ, 8GB, 1TB, GeForce GTX 1050 Ti 4GB, Linux + Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-72,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/112,Dell Latitude 5580,$1144.4,"Dell Latitude 5580, 15.6"" FHD, Core i5-7300U, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-73,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/55,Lenovo Legion Y520-15IKBM,$1149,"Lenovo Legion Y520-15IKBM, 15.6"" FHD IPS, Core i7-7700HQ, 8GB, 128GB SSD + 1TB, GeForce GTX 1060 Max-Q 6GB, DOS",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-74,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/113,MSI GP62M 7RDX Leopard,$1149,"MSI GP62M 7RDX Leopard, 15.6"" FHD, Core i7-7700HQ, 8GB, 1TB + 128GB SSD, GeForce GTX 1050 2GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-75,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/114,Lenovo Yoga 720 Grey,$1149.73,"Lenovo Yoga 720 Grey, 15.6"" FHD IPS, Core i5-7300HQ, 8GB, 256GB SSD, GeForce GTX 1050 2GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-76,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/115,Toshiba Portege Z30-C-16L Grey,$1154.04,"Toshiba Portege Z30-C-16L Grey, 13.3"" FHD, Core i7-6500U, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-77,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/116,Acer TravelMate P645-S-511A Black,$1170.1,"Acer TravelMate P645-S-511A Black, 14"" FHD IPS, Core i5-5200U, 8GB, 256GB SSD, 3G, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-78,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/117,Dell Latitude 5580,$1178.19,"Dell Latitude 5580, 15.6"" FHD, Core i5-7300U, 16GB, 256GB SSD, Linux + Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-79,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/33,ThinkPad T540p,$1178.99,"15.6"", Core i5-4200M, 4GB, 500GB, Win7 Pro 64bit",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-80,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/118,MSI GS63 7RD Stealth,$1179,"MSI GS63 7RD Stealth, 15.6"" FHD IPS, Core i7-7700HQ, 8GB, 256GB SSD, GeForce GTX 1050 2GB, DOS + Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-81,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/119,Dell Latitude 5480,$1187.88,"Dell Latitude 5480, 14"" FHD, Core i5-7300U, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-82,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/120,Acer Predator Helios 300 (PH317-51),$1187.98,"Acer Predator Helios 300 (PH317-51), 17.3"" FHD IPS, Core i7-7700HQ. 8GB, 128GB SSD +1TB, GeForce GTX 1050Ti 4GB, Linux + Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-83,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/121,MSI GL62M 7REX,$1199,"MSI GL62M 7REX, 15.6"" FHD, Core i7-7700HQ, 8GB, 1TB + 128GB SSD, GeForce GTX 1050 Ti 2GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-84,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/122,MSI GL62M 7REX2,$1199,"MSI GL62M 7REX2, 15.6"" FHD, Core i7-7700HQ, 8GB, 1TB + 128GB SSD, GeForce GTX 1050 Ti 2GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-85,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/123,Lenovo Yoga 910 Grey,$1199.73,"Lenovo Yoga 910 Grey, 13.9"" FHD Touch, Core i5-7200U, 8GB, 256GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-86,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/124,Toshiba Portege X30-D-10J Black/Blue,$1203.41,"Toshiba Portege X30-D-10J Black/Blue, 13.3"" FHD IPS, Core i5-7200U, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-87,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/125,Lenovo IdeaPad Miix 510 Platinum Silver,$1212.16,"Lenovo IdeaPad Miix 510 Platinum Silver, 12.2"" IPS Touch, Core i5-7200U, 8GB, 256GB SSD, 4G, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-88,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/126,Acer Predator Helios 300 (PH317-51),$1221.58,"Acer Predator Helios 300 (PH317-51), 17.3"" FHD IPS, Core i7-7700HQ, 8GB, 1TB + 128GB SSD, GeForce GTX 1050 Ti 4GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-89,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/43,ThinkPad Yoga,$1223.99,"12.5"" Touch, Core i5 4200U, 8GB, 500GB + 16GB SSD Cache, Windows",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-90,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/127,Asus VivoBook Pro 15 N580VN-FI006T Gold Metal,$1235.49,"Asus VivoBook Pro 15 N580VN-FI006T Gold Metal, 15.6"" UHD, Core i7-7700HQ, 16GB, 1TB + 256GB SSD, GeForce MX150 2GB, Windows 10 Home, Eng kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-91,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/128,Dell Latitude 5480,$1238.37,"Dell Latitude 5480, 14"" FHD, Core i7-7600U, 8GB, 256GB SSD, Linux",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-92,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/129,Asus ZenBook UX530UX-FY040T Blue,$1239.2,"Asus ZenBook UX530UX-FY040T Blue, 15.6"" FHD, Core i7-7500U, 8GB, 512GB SSD, GeForce GTX950M 2GB, Windows 10 Home, Eng kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-93,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/41,ThinkPad X230,$1244.99,"12.5"", Core i5 2.6GHz, 8GB, 180GB SSD, Win7 Pro 64bit",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-94,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/130,Asus ROG Strix GL753VE-GC096T,$1259,"Asus ROG Strix GL753VE-GC096T, 17.3"" FHD, Core i7-7700HQ, 8GB, 1TB + 128GB SSD, GeForce GTX 1050 Ti 4GB, Windows 10 Home, Eng kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-95,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/131,"Apple MacBook Air 13""",$1260.13,"Apple MacBook Air 13"", i5 1.8GHz, 8GB, 256GB SSD, Intel HD 6000, ENG",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-96,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/132,Dell Latitude 5480,$1271.06,"Dell Latitude 5480, 14"" FHD, Core i7-7600U, 8GB, 1TB, GeForce GT930MX, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-97,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/133,Hewlett Packard Spectre 13-v106na Dark Ash Silver,$1273.11,"Hewlett Packard Spectre 13-v106na Dark Ash Silver, 13.3"" FHD IPS, Core i5-7200U, 8GB, 256GB SSD, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-98,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/40,Dell XPS 13,$1281.99,"13.3"" Touch, Core i5-4210U, 8GB, 128GB SSD, Windows 8.1",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-99,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/134,Toshiba Portege Z30-C-16K Grey,$1294.74,"Toshiba Portege Z30-C-16K Grey, 13.3"" FHD, Core i5-6200U, 8GB, 256GB SSD, 4G, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-100,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/135,MSI GL62VR 7RFX,$1299,"MSI GL62VR 7RFX, 15.6"" FHD, Core i7-7700HQ, 8GB, 1TB + 256GB SSD, GeForce GTX 1060 3GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-101,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/136,Dell Latitude 5480,$1310.39,"Dell Latitude 5480, 14"" FHD, Core i7-7600U, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-102,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/35,ThinkPad X240,$1311.99,"12.5"", Core i5-4300U, 8GB, 240GB SSD, Win7 Pro 64bit",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-103,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/137,Hewlett Packard ProBook 640 G3,$1326.83,"Hewlett Packard ProBook 640 G3, 14"" FHD, Core i7-7600U, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-104,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/138,"Apple MacBook Pro 13"" Space Gray",$1333,"Apple MacBook Pro 13"" Space Gray, Core i5 2.3GHz, 8GB, 128GB SSD, Iris Plus 640, ENG",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-105,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/139,Dell Latitude 5580,$1337.28,"Dell Latitude 5580, 15.6"" FHD, Core i7-7600U, 8GB, 256GB SSD, GeForce GT930MX, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-106,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/140,Dell Latitude 5480,$1338.37,"Dell Latitude 5480, 14"" FHD, Core i7-7600U, 8GB, 256GB SSD, Linux + Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-107,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/141,Dell Latitude 5580,$1341.22,"Dell Latitude 5580, 15.6"" FHD, Core i7-7600U, 16GB, 256GB SSD, GeForce GT930MX, Linux",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-108,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/142,"Apple MacBook Air 13""",$1347.78,"Apple MacBook Air 13"", Intel Core i5 1.8GHz, 8GB, 256GB SSD, Intel HD 6000, RUS",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-109,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/143,Lenovo ThinkPad T470,$1349.23,"Lenovo ThinkPad T470, 14"" FHD IPS, Core i5-7200U, 8GB, 256GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-110,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/144,Lenovo ThinkPad Yoga 370 Black,$1362.24,"Lenovo ThinkPad Yoga 370 Black, 13.3"" FHD IPS Touch, Core i5-7200U, 8GB, 256GB SSD, 4G, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-111,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/145,Toshiba Portege X20W-D-10V Black/Blue,$1366.32,"Toshiba Portege X20W-D-10V Black/Blue, 12.5"" FHD Touch, Core i7-7500U, 8GB, 512GB SSD, Windows 10 Pro",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-112,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/146,Asus ASUSPRO B9440UA-GV0279R Gray,$1381.13,"Asus ASUSPRO B9440UA-GV0279R Gray, 14"" FHD, Core i7-7500U, 16GB, 512GB SSD, Windows 10 Pro, Eng kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-113,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/56,Lenovo Legion Y720,$1399,"Lenovo Legion Y720, 15.6"" FHD IPS, Core i7-7700HQ, 8GB, 128GB SSD + 2TB HDD, GeForce GTX 1060 6GB, DOS, RGB backlit keyboard",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-114,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/147,Asus ROG Strix GL702VM-GC146T,$1399,"Asus ROG Strix GL702VM-GC146T, 17.3"" FHD, Core i7-7700HQ, 8GB, 1TB + 128GB SSD, GeForce GTX 1060 3GB, Windows 10 Home, Eng kbd",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-115,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/57,Asus ROG Strix GL702ZC-GC154T,$1769,"Asus ROG Strix GL702ZC-GC154T, 17.3"" FHD, Ryzen 7 1700, 16GB, 256GB + 1TB HDD, Radeon RX 580 4GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-116,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/58,Asus ROG Strix GL702ZC-GC209T,$1769,"Asus ROG Strix GL702ZC-GC209T, 17.3"" FHD IPS, Ryzen 7 1700, 16GB, 256GB SSD + 1TB HDD, Radeon RX 580 4GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-117,Computers,Laptops,https://webscraper.io./test-sites/e-commerce/allinone/product/59,Asus ROG Strix SCAR Edition GL503VM-ED115T,$1799,"Asus ROG Strix SCAR Edition GL503VM-ED115T, 15.6"" FHD 120Hz, Core i7-7700HQ, 16GB, 256GB SSD + 1TB SSHD, GeForce GTX 1060 6GB, Windows 10 Home",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-118,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/10,Lenovo IdeaTab,$69.99,"7"" screen, Android",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-119,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/15,IdeaTab A3500L,$88.99,"Black, 7"" IPS, Quad-Core 1.2GHz, 8GB, Android 4.2",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-120,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/11,Acer Iconia,$96.99,"7"" screen, Android, 16GB",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-121,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/18,Galaxy Tab 3,$97.99,"7"", 8GB, Wi-Fi, Android 4.2, White",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-122,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/27,Iconia B1-730HD,$99.99,"Black, 7"", 1.6GHz Dual-Core, 8GB, Android 4.4",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-123,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/23,Memo Pad HD 7,$101.99,"IPS, Dual-Core 1.2GHz, 8GB, Android 4.3",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-124,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/12,Asus MeMO Pad,$102.99,"7"" screen, Android, 8GB",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-125,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/13,Amazon Kindle,$103.99,"6"" screen, wifi",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-126,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/22,Galaxy Tab 3,$107.99,"7"", 8GB, Wi-Fi, Android 4.2, Yellow",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-127,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/28,IdeaTab A8-50,$121.99,"Blue, 8"" IPS, Quad-Core 1.3GHz, 16GB, Android 4.2",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-128,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/20,MeMO Pad 7,$130.99,"White, 7"", Atom 1.2GHz, 8GB, Android 4.4",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-129,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/17,IdeaTab A3500-H,$148.99,"Blue, 7"" IPS, Quad-Core 1.3GHz, 8GB, 3G, Android 4.2",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-130,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/26,IdeaTab S5000,$172.99,"Silver, 7"" IPS, Quad-Core 1.2Ghz, 16GB, 3G, Android 4.2",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-131,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/21,Galaxy Tab 4,$233.99,"LTE (SM-T235), Quad-Core 1.2GHz, 8GB, Black",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-132,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/16,Galaxy Tab,$251.99,"16GB, White",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-133,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/25,MeMo PAD FHD 10,$320.99,"White, 10.1"" IPS, 1.6GHz, 2GB, 16GB, Android 4.2",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-134,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/29,Galaxy Note,$399.99,"10.1"", 3G, Android 4.0, Garnet Red",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-135,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/19,Galaxy Note,$489.99,"12.2"", 32GB, WiFi, Android 4.4, White",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-136,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/14,iPad Mini Retina,$537.99,"Wi-Fi + Cellular, 32GB, Silver",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-137,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/24,Galaxy Note 10.1,$587.99,"10.1"", 32GB, Black",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-138,Computers,Tablets,https://webscraper.io./test-sites/e-commerce/allinone/product/30,Apple iPad Air,$603.99,"Wi-Fi, 64GB, Silver",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-139,Phones,Touch,https://webscraper.io./test-sites/e-commerce/allinone/product/1,Nokia 123,$24.99,7 day battery,https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-140,Phones,Touch,https://webscraper.io./test-sites/e-commerce/allinone/product/2,LG Optimus,$57.99,"3.2"" screen",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-141,Phones,Touch,https://webscraper.io./test-sites/e-commerce/allinone/product/3,Samsung Galaxy,$93.99,5 mpx. Android 5.0,https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-142,Phones,Touch,https://webscraper.io./test-sites/e-commerce/allinone/product/4,Nokia X,$109.99,"Andoid, Jolla dualboot",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-143,Phones,Touch,https://webscraper.io./test-sites/e-commerce/allinone/product/5,Sony Xperia,$118.99,"GPS, waterproof",https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-144,Phones,Touch,https://webscraper.io./test-sites/e-commerce/allinone/product/6,Ubuntu Edge,$499.99,Sapphire glass,https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-145,Phones,Touch,https://webscraper.io./test-sites/e-commerce/allinone/product/7,Iphone,$899.99,White,https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-146,Phones,Touch,https://webscraper.io./test-sites/e-commerce/allinone/product/8,Iphone,$899.99,Silver,https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
-147,Phones,Touch,https://webscraper.io./test-sites/e-commerce/allinone/product/9,Iphone,$899.99,Black,https://webscraper.io./images/test-sites/e-commerce/items/cart2.png,Education White Paper,JP,education,Education White Paper
+id,url,title,datetime,description,address,website,Source,country_code,topic,source_name
+1,https://www.tokyo-solamachi.jp/event/2551/,東京スカイツリータウン®  13周年感謝祭,期間：2025年5月9日 ～ 2025年6月1日,"5月22日に東京スカイツリータウンは13周年を迎えます。
+13周年を記念して、限定メニューや商品などをご用意！
+その他にも、様々なフェアやイベントを開催します。
+
+①13周年記念メニュー
+▷今だけのおいしさをお見逃しなく！
+②13周年記念商品＆フェア
+▷この期間だけのスペシャルアイテムも！
+③ハッピーバッグ＆スクラッチ（5/16（金）スタート）
+▷お得なセットに“ハズレなし”のスクラッチ付！
+④13周年大感謝抽選会（5/16（金）スタート）
+▷合計4,400名様以上に豪華景品が当たる！
+⑤13周年記念ピンバッジプレゼント（5/22（木）スタート）
+▷開業記念日の5月22日より、1,000円以上（税込）お買い上げでプレゼント！
+
+詳しくは、下記関連サイトをご覧ください。",東京スカイツリータウン各所,東京スカイツリータウン®  13周年感謝祭の特設サイトはこちらから,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+2,https://www.tokyo-solamachi.jp/event/2557/,ハッピーバッグ＆スクラッチ,期間：2025年5月16日 ～ 2025年6月1日,"13周年を記念して、人気商品をお得に詰め合わせた「ハッピーバッグ」を各店舗で販売！
+感謝を込めて、もれなくハズレなしのスクラッチカード付きです。
+数量限定なのでお見逃しなく！
+
+スクラッチカード
+A賞　東京ソラマチお買物券5,000円分・・・30名様
+B賞　東京ソラマチお買物券1,000円分・・・500名様
+C賞　東京ソラマチお買物券500円分・・・1,000名様
+ハッピー賞　東京ソラマチお買物券100円分
+
+※お釣りは出ません
+※A賞とB賞は額面以上のお会計の際にご利用可能です
+※C賞とハッピー賞はお買物券100円は1,000円（税込）ごとに1枚ご利用可能です
+
+詳しくは、下記関連サイトをご覧ください。",東京スカイツリータウン各所,ハッピーバッグの参加店舗一覧はこちらからチェック！,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+3,https://www.tokyo-solamachi.jp/event/2555/,13周年大感謝抽選会,期間：2025年5月16日 ～ 2025年5月22日,"5/16（金）～5/22（木）の7日間、13周年の感謝を込めて、豪華景品が合計4,400名様以上に当たる「13周年大感謝抽選会」を開催します。
+特賞は日光金谷ホテルまたは中禅寺金谷ホテルのペア宿泊券です！
+
+期間中、東京ソラマチのお買い上げレシート合計5,000円（税込・合算可）ごとに1回抽選が可能です。
+さらに、東武カード・TOBU POINTアプリ・東京ソラマチ公式LINEアカウントのご提示で、それぞれ1回ずつ追加でチャレンジできます！
+
+※台湾祭をはじめ、一部店舗・施設のレシートでは抽選会に参加することができません。詳細は下記関連サイトをご確認ください。
+※景品交換は22日（木）の21:00までとなります。21:00を過ぎますと当選無効となります。
+※抽選券が1日の上限枚数に達した場合、その日の抽選券のお渡しは終了とさせていただきます。
+※抽選会回数上限は、20回までとなります（税込10万円分）。
+※1:00～5:00はシステムメンテナンスのため、抽選にご参加いただけません。",東京スカイツリータウン各所,"豪華景品の内容はこちら（※4等の景品表記の一部に誤りがあったため、正しい表記に修正しております）
+抽選会 対象外店舗・施設一覧",TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+4,https://www.tokyo-solamachi.jp/event/2556/,TOBU POINTポイントアップ！ソラマチスペシャルサンクス,期間：2025年5月16日 ～ 2025年5月25日,"2025年5月16日(金)～25日(日)の期間、「東京ソラマチ スペシャルサンクス」を開催！
+
+東武カードのご提示で10％、TOBU POINTアプリご提示で5%にポイントアップします！
+東武カードのお支払いでさらに1％ポイントアップ！
+クレジット利用はもちろん、PASMOや現金でのお支払いでもポイントがたまります。
+併せて、東武線乗車運賃の50％が貯まるトブポマイルキャンペーンも同時開催！詳細は関連サイトをご覧ください。
+
+東武カードをお持ちでない方も、TOBUPOINTアプリは下記関連サイトからダウンロードいただけます。
+登録無料で、登録後すぐにご利用いただけます。
+ぜひこの機会に、アプリをダウンロードしてお買い物やお食事をお楽しみください。
+
+• ポイントアップ時に付与するポイントは、『（ご利用金額×通常ポイント率）＋（ご利用金額×ポイントアップ率）』で計算されます。
+• 提示ポイントと決済ポイントは、『（ご利用金額×提示ポイント率）＋（ご利用金額×決済ポイント率）』で計算されます。
+• お買い物でたまるポイントの加算は翌日以降となります。
+• お買物でつかうポイントの減算はリアルタイムで行います。
+• アプリ登録済PASMO支払いで付与される0.5%は後日の付与になります。
+※詳細は東武マーケティング株式会社(TEL:03-5396-6561)へお問い合わせください。",東京ソラマチ館内,"東武カードについての詳細はコチラ！
+トブポマイルキャンペーンについての詳細はコチラ！
+TOBUPOINTのご案内はこちら！",TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+5,https://www.tokyo-solamachi.jp/event/2553/,13周年 記念ピンバッジプレゼント,期間：2025年5月22日 ～ 2025年6月1日,"5月22日の開業記念日より、対象店舗にて1レシート1,000円（税込）以上お買い上げいただいた方に、先着で13周年記念ピンバッジを１つプレゼントいたします。
+
+※数に限りがございます。無くなり次第終了とさせていただきます。
+※台湾祭をはじめ、一部対象外の店舗がございます。詳細は関連サイトをご確認ください。
+※対象店舗では店頭POP（画像2枚目）を掲出しております。",東京スカイツリータウン各所,対象外店舗はこちらからご確認ください。,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+6,https://www.tokyo-solamachi.jp/event/2524/,台湾祭in東京スカイツリータウン®2025,期間：2025年4月5日 ～ 2025年6月1日,"「台湾祭」台湾グルメ＆ドリンクが東京スカイツリータウン®に集結、会場は台湾夜市風のネオンライトアップ！
+
+「台湾祭」は、【365日の台湾夜市を日本で。】をテーマに台湾各地の夜市グルメなどを通じて台湾と日本の交流の懸け橋となることを目指しているイベントで、東京スカイツリータウンでは今年で3度目の開催となります。
+今回はおなじみの絶品台湾グルメに加え、台湾新北市にある「楽華夜市」とのコラボメニューや、台湾産のレモンを使った「台湾生レモンサワー」が登場するなど、新しいコンテンツ盛りだくさんでお届け致します。
+昼と夜で表情を変える台湾夜市風のネオンで彩られた会場も必見です。
+毎年ご好評を頂いております台湾物販コーナーや台湾式マッサージ、占いブースもさらに充実。
+
+台湾の魅力がたっぷり詰まった春のソラマチに是非お越しください。
+
+※GW期間（4月26日～5月7日）の決済方法は「現金のみ」となります。
+※ＧＷ期間（5月3日～６日）は営業時間は10：00～21：30となります。","4F スカイアリーナ
+フロアガイド","台湾祭in東京スカイツリータウン®2025公式サイト
+台湾祭in東京スカイツリータウン®2025公式インスタグラム
+台湾祭in東京スカイツリータウン®2025公式X",TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+7,https://www.tokyo-solamachi.jp/event/2562/,キモい展2025,期間：2025年5月24日 ～ 2025年7月6日,"色や形、見た目はキモチ悪いけれど、「キモい」には理由(ワケ)がある生き物を世界中から集めて展示します。
+
+今年は、毎週月・水・金曜日の15:00～15:30日時限定でキモアニ（キモチ悪いアニマルの略）とのふれあいコーナーも開催！
+帰ってきた究極のキモい体験!?
+ぜひじっくり観察して、ふれあってみてください。
+※心臓の悪い方、アレルギーのお持ちの方はご遠慮ください。
+※通常入場料が必要となります。
+※スタッフの指示を必ずお守りください。
+
+【動物取扱に関する表示】
+氏名又は名称：株式会社セッティングプロモーション　代表取締役　土田謙一/事業所の名称：キモい展2025/事業所の所在地：東京都墨田区押上一丁目1番2号　東京ソラマチ5階スぺ―ス634/種別及び登録番号：展示　25東京都展第008637号/登録年月日：令和7年5月24日/有効期限の末日：令和12年5月23日/動物取扱責任者：今井　茂","5F スペース634
+フロアガイド",,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+8,https://www.tokyo-solamachi.jp/event/2543/,リコリス・リコイル × すみだスタンプラリー,期間：2025年4月25日 ～ 2025年6月1日,"人気アニメ「リコリス・リコイル」の作品の聖地を巡るデジタルスタンプラリーを、地元墨田区内を舞台に開催！
+各スポットを回って、オリジナルフォトフレームを手に入れよう。
+
+東京スカイツリータウン®では２か所のスタンプを設置します。
+①東京スカイツリータウン®
+②東京ミズマチ®
+上記を含む、区内全10か所のスタンプスポットのうち６か所を達成するとオリジナル壁紙をプレゼントします！
+
+期間中、WISE OWL HOSTELS RIVER TOKYOでは「リコリス・リコイル」をイメージした、ここでしか食べられないオリジナルコラボメニューを展開するほか、コネクトすみだ「まち処」では期間限定コラボオリジナルグッズも販売予定です。
+皆様のご参加をお待ちしております。
+
+
+【スタンプラリースポット】
+1.東京スカイツリータウン
+2.東京ミズマチ（コネクトすみだ［まち処］、WISE OWL HOSTELS RIVER TOKYO）
+3.大黒湯
+4.黄金湯
+5.「リコリス・リコイル」マンホール（錦糸公園付近）
+6.錦糸町マルイ
+7.水上バス（東京水辺ライン両国発着場）
+8.かめぱんcafe
+9.さがみ庵
+10.FUGA COFFEE",東京スカイツリータウン内（東京ソラマチ・東京ミズマチ各所）、墨田区内各所,"イベント公式サイト
+墨田区観光協会公式サイト
+コラボカフェサイト
+スタンプラリーアプリ「furari」ダウンロードはこちら",TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+9,https://www.tokyo-solamachi.jp/event/2558/,キーコーヒー株式会社主催「KEY DOORS＋ブランド無料コーヒー試飲会＆抽選会」,期間：2025年5月24日 ～ 2025年5月24日,"5月24日は東京スカイツリータウン® 1F ソラマチひろばで無料でコーヒーをプレゼント！
+
+この度キーコーヒー株式会社様主催で「KEY DOORS＋ブランドの無料コーヒー試飲会＆抽選会」をソラマチ広場にて開催いたします。
+コーヒーを試飲していただいたお客様には豪華賞品の当たる巨大ガラポン抽選会にご参加いただけます。
+どなたでも無料でご参加いただける１日限りのイベントとなっております。
+気持ちの良い初夏の季節に、芳醇で深みのある、まろやかなコク、スッキリとした口当りが特徴のコーヒーで素敵なひと時をお届け致します。
+
+この機会にぜひ東京スカイツリータウン® 1F ソラマチひろばまでお越しくださいませ。","1F ソラマチひろば
+フロアガイド",,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+10,https://www.tokyo-solamachi.jp/event/2560/,ソラマチ大道芸 特別公演 THE サーカス,期間：2025年5月31日 ～ 2025年6月1日,"東京スカイツリータウン 開業13周年記念をお祝いして、THEサーカスと題した ソラマチ大道芸の特別公演を開催いたします。
+メインゲストに魔法使いアキットを迎え、サーカスの雰囲気をテーマにした華やかな演技と13周年開業オリジナルストーリーによるパフォーマンスをお楽しみいただけます。
+一般のお客様からファンの皆様まで、みんなで一緒に13周年をお祝いするイベントです。
+
+※天候により中止となる場合がございます。","1F ソラマチひろば
+フロアガイド","ソラマチ大道芸HP
+スケジュールはこちら",TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+11,https://www.tokyo-solamachi.jp/event/2561/,ソラマチ大道芸フェスティバル2025,期間：2025年6月7日 ～ 2025年6月8日,"毎年開催の「ソラマチ大道芸フェスティバル」
+今年もおなじみの人気パフォーマーに加え、多彩なジャンルの出演者が続々登場！
+大道芸ファンはもちろん、初めて訪れる方にも楽しんでいただける内容です。
+
+また、今年は東京ミズマチにもパフォーマンススポットを拡大！
+東京スカイツリーに隣接する「ソラマチ」と水辺の街「ミズマチ」。
+それぞれの個性あふれる空間を行き来しながら、街と芸の魅力をたっぷりご堪能ください。",4F スカイアリーナ／1F ソラマチひろば／東京ミズマチ,"ソラマチ大道芸フェスティバル2025公式サイト
+スケジュールはこちら",TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+12,https://www.tokyo-solamachi.jp/event/2549/,5月のスイーツイベント(5/1~5/31) ※一部5/16から,期間：2025年5月1日 ～ 2025年5月31日,"毎月、新しい味をお届けするスイーツイベント。
+
+【2階6番地】
+■イタリアン・トマト
+※5/1(木) ～ 5/31(土)
+スプーンですくって楽しむ新感覚ケーキ「スプーンdeスイーツ」や、パティシエが丁寧に仕上げたケーキをご用意。
+季節のケーキをお楽しみください。
+
+■五建外良屋
+※5/1(木) ～ 5/31(土)
+安政二年(1855年)創業の京都老舗和菓子店より、この時期限定の京生菓子をお届けします。
+---------
+
+【2階5番地】
+◆フラワーピクニックカフェ
+※5/1(木) ～ 5/31(土)
+ギフトにおすすめ！北海道函館の食べられるお花のスイーツ。
+見て・味わって満たされるお花のスイーツをご賞味ください。
+
+◆御福餅本家
+※5/16(金) ～ 5/31(土)
+二見浦に打ち寄せる波を手作業で表現した定番のお福餅は、確かな技と誇りを込めて職人が丁寧に手作業で詰めた伝統の味です。
+素材を吟味し、変わらないおいしさを紡ぐために日々研鑽を重ねております。",2階5番地、2階6番地,"「イタリアン・トマト」詳細はこちら
+「五建外良屋」詳細はこちら
+「フラワーピクニックカフェ」詳細はこちら
+「御福餅本家」詳細はこちら",TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+13,https://www.tokyo-solamachi.jp/event/2550/,フードマルシェ お買い得カレンダー,期間：2025年5月1日 ～ 2025年5月31日,"フードマルシェでは、毎日お得がいっぱい！
+1ヶ月のお得情報をまとめてチェックできるカレンダーをご用意しました。
+
+詳細は関連リンクをご覧ください。","2F フードマルシェ
+フロアガイド",5月のお買い得カレンダー,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+14,https://www.tokyo-solamachi.jp/event/2536/,最大500席！東京ソラマチ® 屋外休憩スペースMAP,期間：2025年4月7日 ～,"東京ソラマチには最大500席もの屋外休憩スペースがあることをご存じですか？
+特に北十間川沿いにある2Fの南面テラスには、約300席もの休憩スペースが！
+
+ショッピング途中の小休憩はもちろん、テイクアウトグルメを楽しむのもおすすめです。
+館内を散策した後は、お気に入りの休憩スペースを探してみて！
+
+各場所の詳細は、下記関連サイトからご確認ください。",東京スカイツリータウン各所,屋外休憩スペースの詳細はこちらからチェック！,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+15,https://www.tokyo-solamachi.jp/event/2544/,階段グラフィカルライティングのコンテンツ追加,期間：2025年4月16日 ～,"2024年度にデビューした「ソラミ坂」「ハナミ坂」の階段をLEDグラフィカル照明でライトアップする「階段グラフィカルライティング」に新コンテンツを追加しました。
+
+日本屈指の観光地である東京スカイツリータウンから、全国並びに世界に向けて COOL TOKYO をテーマにした、大正着物の柄や金魚、歌舞伎の隈取など、日本を感じられる様々な音と映像を、最新の映像技法でお楽しみいただけます。
+
+※東京スカイツリー®の３種の通常ライティング「粋」「雅」「幟」に連動したデザインに本コンテンツを追加したものです。
+※この事業は、東京都・（公財）東京観光財団の「建造物等のライトアップモデル事業費助成金」を活用して実施しています。",ソラミ坂、ハナミ坂,,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+16,https://www.tokyo-solamachi.jp/event/2461/,初登場！階段グラフィカルライティング,期間：2024年11月7日 ～,"「ソラミ坂」「ハナミ坂」の階段をLEDグラフィカル照明でライトアップする「階段グラフィカルライティング」が初登場！
+東京スカイツリー®の３種の通常ライティング「粋」「雅」「幟」に連動したデザインの他、クリスマス等のシーズンごとの特別ライトアップもお楽しみいただけます。
+
+※この事業は、東京都・（公財）東京観光財団の「建造物等のライトアップモデル事業費助成金」を活用して実施しています。",ソラミ坂、ハナミ坂,,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+17,https://www.tokyo-solamachi.jp/event/1551/,毎月5のつく日はTOBU POINT ポイントアップ！,期間：2020年11月5日 ～,"毎月5のつく日は、東武カードご利用でポイントが5％、TOBU POINTアプリご提示で2.5%にアップ！
+
+東武カードのお支払いでさらに1％ポイントアップ！
+クレジット利用はもちろん、PASMOや現金でのお支払いでもポイントがたまります。
+さらに、5のつく日に東武線に乗ってソラマチでお買い物をすると、東武線乗車運賃の50％分のトブポマイルがたまるキャンペーンも実施中！
+詳細は関連サイトをご覧ください。
+
+東武カードをお持ちでない方も、TOBUPOINTアプリは下記関連サイトからダウンロードいただけます。
+登録無料で、登録後すぐにご利用いただけます。
+ぜひこの機会に、アプリをダウンロードしてお買い物やお食事をお楽しみください。
+
+■開催日：
+毎月5日、15日、25日
+※一部除外日がございます。
+※一部対象外店舗、対象外商品がございます。
+※ポイントアップ時に付与するポイントは、『（ご利用金額×通常ポイント率）＋（ご利用金額×ポイントアップ率）』で計算されます。
+※提示ポイントと決済ポイントは、『（ご利用金額×提示ポイント率）＋（ご利用金額×決済ポイント率）』で計算されます。
+※お買い物でたまるポイントの加算は翌日以降となります。
+※お買物でつかうポイントの減算はリアルタイムで行います。
+※アプリ登録済PASMO支払いで付与される0.5%は後日の付与になります。
+※詳細は東武マーケティング株式会社(TEL:03-5396-6561)へお問い合わせください。",東京ソラマチ館内,"TOBUPOINTのご案内はこちら！
+トブポマイルキャンペーンについての詳細はコチラ！",TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+18,https://www.tokyo-solamachi.jp/event/899/,東京スカイツリータウン(R)チケ得サービス,期間：2018年1月1日 ～,"東京スカイツリー(R)、すみだ水族館、コニカミノルタプラネタリウム天空in東京スカイツリータウン(R)の対象のチケットを
+東京ソラマチのお店で購入時またはご注文時にご提示いただくと、おトクなサービスが受けられます！
+
+【対象チケット】
+・東京スカイツリー(R)　当日入場券
+・すみだ水族館　年間パスポート、当日入場券、WEBチケット画面
+・コニカミノルタプラネタリウム天空in東京スカイツリータウン(R)　当日入場券またはWEB予約画面
+
+サービス対象店舗・サービス内容は下記関連サイトからご覧いただけます。",東京ソラマチ館内,サービス対象店舗・サービス内容はこちら,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+19,https://www.tokyo-solamachi.jp/event/415/,お得がいっぱい！2F フードマルシェ「火曜市」,期間：2024年1月1日 ～,"お得がいっぱい！2F フードマルシェ「火曜市」【毎週火曜日夕方5時～7時】
+毎回ご好評いただいている2F フードマルシェ デリカゾーンの「火曜市」。
+毎週火曜の夕方5時～7時までの2時間限定開催です！
+
+割引率がアップしたお得な商品や火曜市でしか買えない限定商品、出来立て商品など、フードマルシェの各店でご用意いたします♪
+どうぞお買い逃しなく!!","2F フードマルシェ
+フロアガイド",,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+20,https://www.tokyo-solamachi.jp/event/1639/,東京ソラマチ公式インスタグラムのご案内,期間：2021年6月4日 ～,"東京ソラマチの公式インスタグラムでは、商品情報やイベント情報をはじめ、東京ソラマチのトリビアまで、皆さまに東京ソラマチの魅力をシェアしていきます！
+ぜひフォローよろしくお願いいたします！",東京ソラマチ館内,東京ソラマチ 公式Instagramはこちら！,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+21,https://www.tokyo-solamachi.jp/event/1175/,東京ソラマチ LINE公式アカウントのご案内,期間：2018年11月8日 ～,"東京ソラマチのLINE公式アカウントが登場！
+最新イベント情報やお得なクーポン、ショップ情報をお届けします！
+ぜひ、東京ソラマチを友だち追加お願いいたします♪
+
+●友だち追加の方法
+①関連リンクから
+ページ下部の関連リンクの「東京ソラマチLINE公式アカウント友だち追加はこちら！」から、友だち追加ください。
+②ID検索から
+LINEの「友だち追加」画面から、「@solamachi」で検索してください。
+
+旬なイベントやお得なキャンペーン情報が満載の東京ソラマチLINE公式アカウントを今すぐチェック！",東京ソラマチ館内,東京ソラマチLINE公式アカウント友だち追加はこちら！,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
+22,https://www.tokyo-solamachi.jp/event/2545/,ソラマチひろば噴水スケジュール,期間：2024年5月7日 ～,"【5/14　スケジュール更新しました】
+
+ソラマチひろばの噴水スケジュールです。
+涼しげな噴水をおたのしみください。
+
+直近の噴水のスケジュールは下記をご確認ください。
+※予告なく変更する場合がございます。ご了承ください。
+
+【噴水スケジュール】
+5/7（水）～　10：00～19：00
+
+■噴水停止日（予定） 
+〈5月〉
+・5/24（土）
+・5/25（日）
+・5/28（水）
+・5/31（土）
+
+〈6月〉
+・6/1（日）
+・6/7（土）
+・6/8（日）
+・6/14（土）
+・6/15（日）
+・6/20（金）
+・6/21（土）
+・6/22（日）
+・6/28（土）
+・6/29（日）
+
+【注意事項】
+・マナーを守っておたのしみください。
+・裸にはならないでください。
+・濡れた体のまま館内に入らないでください。
+・大きな声を出さないでください。
+・ペットの連れ込みはご遠慮ください。
+・洗剤、石鹸、シャボン玉等、水質に影響を与えるものは持ち込まないでください。
+・事故等の責任は負いかねますので、あらかじめご了承ください。
+・施設の都合および天候により、予告なく噴水の放出時間や実施の有無を変更する場合がございます。あらかじめご了承ください。
+・自転車で来場される方は、館内の自転車駐車場をご利用ください。","1F ソラマチひろば
+フロアガイド",,TOKYO　東京ソラマチ,JP,education,TOKYO　東京ソラマチ
