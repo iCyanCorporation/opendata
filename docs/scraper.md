@@ -21,26 +21,29 @@ These fields should be included in all datasets to provide essential context:
 
 Fields for standardizing geographic data:
 
-| Field Name      | Data Type | Description              | Example                             |
-| --------------- | --------- | ------------------------ | ----------------------------------- |
-| `location_name` | String    | Name of location         | `"Tokyo"`                           |
-| `location_type` | String    | Type of location         | `"city"`, `"prefecture"`, `"state"` |
-| `latitude`      | Float     | Latitude coordinate      | `35.6762`                           |
-| `longitude`     | Float     | Longitude coordinate     | `139.6503`                          |
-| `region`        | String    | Region or state/province | `"Kanto"`                           |
-| `postal_code`   | String    | Postal/ZIP code          | `"100-0001"`                        |
-| `address`       | String    | Full address             | `"1-1 Example Street, Tokyo"`       |
+| Field Name        | Data Type | Description                                        | Example                               |
+| ----------------- | --------- | -------------------------------------------------- | ------------------------------------- |
+| `location_name`   | String    | Name of location                                   | `"Tokyo"`                             |
+| `location_type`   | String    | Type of location                                   | `"city"`, `"prefecture"`, `"state"`   |
+| `latitude`        | Float     | Latitude coordinate                                | `35.6762`                             |
+| `longitude`       | Float     | Longitude coordinate                               | `139.6503`                            |
+| `region`          | String    | Region or state/province                           | `"Kanto"`                             |
+| `postal_code`     | String    | Postal/ZIP code                                    | `"100-0001"`                          |
+| `address`         | String    | Full address                                       | `"1-1 Example Street, Tokyo"`         |
+| `meeting_address` | String    | Specific address where a meeting/event takes place | `"Conference Room A, Tokyo Building"` |
 
 ## Contact Information
 
 Fields for standardizing contact details:
 
-| Field Name     | Data Type | Description                          | Example                 |
-| -------------- | --------- | ------------------------------------ | ----------------------- |
-| `contact_name` | String    | Name of contact person or department | `"Information Office"`  |
-| `phone`        | String    | Phone number with country code       | `"+81-3-1234-5678"`     |
-| `email`        | String    | Email address                        | `"contact@example.org"` |
-| `website`      | String    | Website URL                          | `"https://example.org"` |
+| Field Name     | Data Type | Description                                           | Example                       |
+| -------------- | --------- | ----------------------------------------------------- | ----------------------------- |
+| `contact_name` | String    | Name of contact person or department                  | `"Information Office"`        |
+| `phone`        | String    | Phone number with country code                        | `"+81-3-1234-5678"`           |
+| `email`        | String    | Email address                                         | `"contact@example.org"`       |
+| `website`      | String    | Website URL                                           | `"https://example.org"`       |
+| `lecturer`     | String    | Name of person conducting a lecture/presentation      | `"Prof. Yamada Taro"`         |
+| `organizer`    | String    | Person or organization responsible for event/activity | `"Tokyo Science Association"` |
 
 ## Temporal Data
 
@@ -73,15 +76,16 @@ Fields for categorization:
 
 Fields for the actual content:
 
-| Field Name    | Data Type | Description                  | Example                                  |
-| ------------- | --------- | ---------------------------- | ---------------------------------------- |
-| `title`       | String    | Title of the content         | `"Annual Education Report"`              |
-| `name`        | String    | Name of the item             | `"Asus VivoBook X441NA"`                 |
-| `description` | String    | Detailed description         | `"Detailed statistical analysis of..."`  |
-| `summary`     | String    | Brief summary of the content | `"Overview of enrollment trends"`        |
-| `content`     | String    | Full content text            | `"The complete article text..."`         |
-| `image_url`   | String    | URL to associated image      | `"https://example.org/images/chart.png"` |
-| `file_url`    | String    | URL to associated file       | `"https://example.org/files/data.xlsx"`  |
+| Field Name        | Data Type | Description                   | Example                                     |
+| ----------------- | --------- | ----------------------------- | ------------------------------------------- |
+| `title`           | String    | Title of the content          | `"Annual Education Report"`                 |
+| `name`            | String    | Name of the item              | `"Asus VivoBook X441NA"`                    |
+| `description`     | String    | Detailed description          | `"Detailed statistical analysis of..."`     |
+| `summary`         | String    | Brief summary of the content  | `"Overview of enrollment trends"`           |
+| `content`         | String    | Full content text             | `"The complete article text..."`            |
+| `image_url`       | String    | URL to associated image       | `"https://example.org/images/chart.png"`    |
+| `file_url`        | String    | URL to associated file        | `"https://example.org/files/data.xlsx"`     |
+| `target_audience` | String    | Intended audience for content | `"High school teachers and administrators"` |
 
 ## Numerical Data
 
@@ -116,15 +120,19 @@ Fields specific to education data:
 
 Fields specific to event data:
 
-| Field Name         | Data Type | Description                  | Example                          |
-| ------------------ | --------- | ---------------------------- | -------------------------------- |
-| `event_name`       | String    | Name of the event            | `"Science Fair 2025"`            |
-| `event_type`       | String    | Type of event                | `"conference"`, `"workshop"`     |
-| `venue`            | String    | Location where event is held | `"Tokyo International Forum"`    |
-| `organizer`        | String    | Entity organizing the event  | `"Science Association"`          |
-| `capacity`         | Integer   | Maximum number of attendees  | `500`                            |
-| `registration_url` | String    | URL for event registration   | `"https://example.org/register"` |
-| `cost`             | Float     | Cost to attend               | `1000.00`                        |
+| Field Name           | Data Type | Description                              | Example                                |
+| -------------------- | --------- | ---------------------------------------- | -------------------------------------- |
+| `event_name`         | String    | Name of the event                        | `"Science Fair 2025"`                  |
+| `event_type`         | String    | Type of event                            | `"conference"`, `"workshop"`           |
+| `venue`              | String    | Location where event is held             | `"Tokyo International Forum"`          |
+| `organizer`          | String    | Entity organizing the event              | `"Science Association"`                |
+| `capacity`           | Integer   | Maximum number of attendees              | `500`                                  |
+| `registration_url`   | String    | URL for event registration               | `"https://example.org/register"`       |
+| `cost`               | Float     | Cost to attend                           | `1000.00`                              |
+| `price`              | Float     | Price of ticket/entry (synonym for cost) | `5000.00`                              |
+| `participant_limit`  | Integer   | Maximum number of participants allowed   | `100`                                  |
+| `application_method` | String    | How to apply for the event               | `"Apply via website or call directly"` |
+| `target_audience`    | String    | Target audience or participants          | `"Parents with children ages 5-12"`    |
 
 ## Technical Fields
 
@@ -166,12 +174,19 @@ Fields for technical metadata:
   "year": 2025,
   "education_level": "tertiary",
   "enrollment_count": 2750000,
-  "processing_level": "verified"
+  "processing_level": "verified",
+  "lecturer": "Prof. Yamada Taro",
+  "meeting_address": "University Conference Hall, 3F",
+  "organizer": "Ministry of Education",
+  "price": 0,
+  "participant_limit": 200,
+  "application_method": "Registration required on the website",
+  "target_audience": "University administrators and education researchers"
 }
 ```
 
 ### CSV Headers Example
 
 ```
-id,source_name,source_url,event_time,country_code,topic,language,status,institution_name,institution_type,enrollment_count,academic_year
+id,source_name,source_url,event_time,country_code,topic,language,status,meeting_address,lecturer,organizer,price,participant_limit,application_method,target_audience
 ```
