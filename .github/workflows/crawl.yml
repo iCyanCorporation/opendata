@@ -1,0 +1,51 @@
+name: Daily Data Crawl
+
+on:
+  schedule:
+    # Run daily at midnight UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+    # Allow manual triggering
+    inputs:
+      topic:
+        description: "Specific topic to collect data for (leave empty for all)"
+        required: false
+      country:
+        description: "Specific country code to collect data for (leave empty for all)"
+        required: false
+
+jobs:
+  crawl_data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run crawlers
+        run: python crawl_all.py
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/
+
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update data [$(date +'%Y-%m-%d')]"
+            git push
+          fi

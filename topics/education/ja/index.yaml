@@ -1,0 +1,21 @@
+# Configuration for Japan education data
+metadata:
+  country_code: "JP"
+  topic: "education"
+
+# Multiple data sources can be configured
+sources:
+  - name: "MEXT Enrollment Statistics"
+    enabled: true
+    type: "html"
+    url: "https://www.mext.go.jp/en/publication/statistics/title01/detail01/1373636.htm"
+
+  - name: "Education White Paper"
+    enabled: true
+    type: "scraper"
+    config: "test.json"
+
+  - name: "Japan Education Statistics"
+    enabled: true
+    type: "excel"
+    url: "https://www.mext.go.jp/en/content/20200305-mxt_chousa01-000004520_1.xlsx"

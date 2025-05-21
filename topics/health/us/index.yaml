@@ -1,0 +1,21 @@
+# Configuration for US health data
+metadata:
+  country_code: "US"
+  topic: "health"
+
+# Multiple data sources can be configured
+sources:
+  - name: "CDC Health Expenditure"
+    enabled: true
+    type: "html"
+    url: "https://www.cdc.gov/nchs/fastats/health-expenditures.htm"
+
+  - name: "CMS Medicare Data"
+    enabled: true
+    type: "excel"
+    url: "https://www.cms.gov/files/document/national-health-expenditures-2022.xlsx"
+
+  - name: "HHS Health Reports"
+    enabled: true
+    type: "pdf"
+    url: "https://www.hhs.gov/sites/default/files/fy-2023-annual-report.pdf"

@@ -1,0 +1,61 @@
+{
+  "_id": "test1",
+  "startUrl": ["https://webscraper.io./test-sites/e-commerce/allinone"],
+  "selectors": [
+    {
+      "id": "cata-link",
+      "linkType": "linkFromHref",
+      "multiple": true,
+      "parentSelectors": ["_root"],
+      "selector": "a.category-link",
+      "type": "SelectorLink"
+    },
+    {
+      "id": "subcata-link",
+      "linkType": "linkFromHref",
+      "multiple": true,
+      "parentSelectors": ["cata-link"],
+      "selector": "a.subcategory-link",
+      "type": "SelectorLink"
+    },
+    {
+      "id": "prod-link",
+      "linkType": "linkFromHref",
+      "multiple": true,
+      "parentSelectors": ["subcata-link"],
+      "selector": "a.title",
+      "type": "SelectorLink"
+    },
+    {
+      "id": "name",
+      "multiple": false,
+      "parentSelectors": ["prod-link"],
+      "regex": "",
+      "selector": "h4.title",
+      "type": "SelectorText"
+    },
+    {
+      "id": "price",
+      "multiple": false,
+      "parentSelectors": ["prod-link"],
+      "regex": "",
+      "selector": "h4.price",
+      "type": "SelectorText"
+    },
+    {
+      "id": "description",
+      "multiple": false,
+      "parentSelectors": ["prod-link"],
+      "regex": "",
+      "selector": "p.description",
+      "type": "SelectorText"
+    },
+    {
+      "id": "image",
+      "multiple": false,
+      "parentSelectors": ["prod-link"],
+      "selector": "img.image",
+      "type": "SelectorImage"
+    }
+  ]
+}
