@@ -6,15 +6,16 @@ This document defines the standard field names to be used across all data collec
 
 These fields should be included in all datasets to provide essential context:
 
-| Field Name     | Data Type      | Description                              | Example                        |
-| -------------- | -------------- | ---------------------------------------- | ------------------------------ |
-| `id`           | String/Integer | Unique identifier for each record        | `"123"`, `42`                  |
-| `source_name`  | String         | Name of the data source                  | `"MEXT Enrollment Statistics"` |
-| `source_url`   | String         | Original URL where the data was obtained | `"https://example.gov/data"`   |
-| `timestamp`    | DateTime       | When the data was collected (ISO format) | `"2025-05-21T14:30:00Z"`       |
-| `country_code` | String         | ISO 3166-1 alpha-2 country code          | `"JP"`, `"US"`                 |
-| `topic`        | String         | Primary topic category of the data       | `"education"`, `"healthcare"`  |
-| `language`     | String         | ISO 639-1 language code of the content   | `"en"`, `"ja"`                 |
+| Field Name     | Data Type      | Description                              | Example                               |
+| -------------- | -------------- | ---------------------------------------- | ------------------------------------- |
+| `id`           | String/Integer | Unique identifier for each record        | `"123"`, `42`                         |
+| `source_name`  | String         | Name of the data source                  | `"MEXT Enrollment Statistics"`        |
+| `source_url`   | String         | Original URL where the data was obtained | `"https://example.gov/data"`          |
+| `event_time`   | DateTime       | When the data was collected (ISO format) | `"2025-05-21T14:30:00Z"`              |
+| `country_code` | String         | ISO 3166-1 alpha-2 country code          | `"JP"`, `"US"`                        |
+| `topic`        | String         | Primary topic category of the data       | `"education"`, `"healthcare"`         |
+| `language`     | String         | ISO 639-1 language code of the content   | `"en"`, `"ja"`                        |
+| `status`       | String         | Processing status of the record          | `"active"`, `"archived"`, `"pending"` |
 
 ## Location Information
 
@@ -66,7 +67,6 @@ Fields for categorization:
 | `category`    | String           | Primary category      | `"Computers"`                               |
 | `subcategory` | String           | Secondary category    | `"Laptops"`                                 |
 | `tags`        | Array of Strings | List of relevant tags | `["education", "statistics", "enrollment"]` |
-| `status`      | String           | Status of the item    | `"active"`, `"archived"`, `"pending"`       |
 | `type`        | String           | Type of the content   | `"article"`, `"data sheet"`, `"report"`     |
 
 ## Content Data
@@ -157,10 +157,11 @@ Fields for technical metadata:
   "id": "edu-jp-2025-001",
   "source_name": "MEXT Enrollment Statistics",
   "source_url": "https://www.mext.go.jp/en/publication/statistics/title01/detail01/1373636.htm",
-  "timestamp": "2025-05-21T08:30:00Z",
+  "event_time": "2025-05-21T08:30:00Z",
   "country_code": "JP",
   "topic": "education",
   "language": "en",
+  "status": "active",
   "title": "University Enrollment Statistics 2025",
   "year": 2025,
   "education_level": "tertiary",
@@ -172,5 +173,5 @@ Fields for technical metadata:
 ### CSV Headers Example
 
 ```
-id,source_name,source_url,timestamp,country_code,topic,institution_name,institution_type,enrollment_count,academic_year
+id,source_name,source_url,event_time,country_code,topic,language,status,institution_name,institution_type,enrollment_count,academic_year
 ```
