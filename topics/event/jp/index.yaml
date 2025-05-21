@@ -12,13 +12,17 @@ sources:
     enabled: true
     type: "scraper"
     config: "www-my-metro-tokyo-lg-jp.json"
+  - name: "Doorkeeper"
+    enabled: true
+    type: "scraper"
+    config: "doorkeeper.json"
 
   # ================================================
   # API sources with external configuration files
-  - name: "Doorkeeper Events API"
-    enabled: true
-    type: "api"
-    config: "doorkeeper.json"
+  # - name: "Doorkeeper Events API"
+  #   enabled: true
+  #   type: "api"
+  #   config: "doorkeeper.json"
   # - name: "Connpass Events API"
   #   enabled: false
   #   type: "api"

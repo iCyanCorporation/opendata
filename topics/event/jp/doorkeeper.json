@@ -1,0 +1,61 @@
+{
+  "_id": "doorkeeper",
+  "startUrl": ["https://www.doorkeeper.jp/events?page=[1-10]"],
+  "selectors": [
+    {
+      "id": "index",
+      "linkType": "linkFromHref",
+      "multiple": true,
+      "parentSelectors": ["_root"],
+      "selector": "div.global-event-list-day:nth-of-type(1) h3 a",
+      "type": "SelectorLink"
+    },
+    {
+      "id": "title",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "regex": "",
+      "selector": "h1.community-content-title",
+      "type": "SelectorText"
+    },
+    {
+      "id": "event_time",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "regex": "",
+      "selector": "date",
+      "type": "SelectorText"
+    },
+    {
+      "id": "event_format",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "regex": "",
+      "selector": ".community-event-info-content a.label",
+      "type": "SelectorText"
+    },
+    {
+      "id": "description",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "regex": "",
+      "selector": "div.community-event-description",
+      "type": "SelectorText"
+    },
+    {
+      "id": "organizer",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "regex": "",
+      "selector": ".community-title a",
+      "type": "SelectorText"
+    },
+    {
+      "id": "image_url",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "selector": "img.event-banner-image",
+      "type": "SelectorImage"
+    }
+  ]
+}
