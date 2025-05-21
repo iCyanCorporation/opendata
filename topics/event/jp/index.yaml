@@ -16,6 +16,10 @@ sources:
     enabled: true
     type: "scraper"
     config: "doorkeeper.json"
+  # - name: "Peatix"
+  #   enabled: true
+  #   type: "scraper"
+  #   config: "peatix.json"
 
   # ================================================
   # API sources with external configuration files

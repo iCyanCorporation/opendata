@@ -1,0 +1,9 @@
+# Configuration for testing a single scraper
+# This is a simplified version of the main YAML for testing individual sources
+
+# Multiple data sources can be configured
+sources:
+  - name: "TOKYO　東京ソラマチ"
+    enabled: true
+    type: "scraper"
+    config: "tokyo-solamachi-jp.json"

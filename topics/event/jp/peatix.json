@@ -1,0 +1,71 @@
+{
+  "_id": "peatix",
+  "startUrl": [
+    "https://peatix.com/search?country=JP&l.text=Anywhere&p=[1-20]&size=20&v=3.4&tag_ids&dr"
+  ],
+  "selectors": [
+    {
+      "id": "index",
+      "linkType": "linkFromHref",
+      "multiple": true,
+      "parentSelectors": ["_root"],
+      "selector": ".event-list__medium a",
+      "type": "SelectorLink"
+    },
+    {
+      "id": "image_url",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "selector": "img.event-visual__image",
+      "type": "SelectorImage"
+    },
+    {
+      "id": "title",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "regex": "",
+      "selector": "h1",
+      "type": "SelectorText"
+    },
+    {
+      "id": "address",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "regex": "",
+      "selector": ".lh-condensed span:nth-of-type(1)",
+      "type": "SelectorText"
+    },
+    {
+      "id": "organizer",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "regex": "",
+      "selector": "a.pod-thumb__name-link",
+      "type": "SelectorText"
+    },
+    {
+      "id": "event_date",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "regex": "",
+      "selector": "p.weekdate",
+      "type": "SelectorText"
+    },
+    {
+      "id": "event_time",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "regex": "",
+      "selector": "time p:nth-of-type(2)",
+      "type": "SelectorText"
+    },
+    {
+      "id": "description",
+      "multiple": false,
+      "parentSelectors": ["index"],
+      "regex": "",
+      "selector": ".event-description section",
+      "type": "SelectorText"
+    }
+  ]
+}

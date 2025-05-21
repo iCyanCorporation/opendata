@@ -1,0 +1,61 @@
+{
+  "_id": "tokyo-solamachi-jp",
+  "startUrl": ["https://www.tokyo-solamachi.jp/event/list/?page=[1-3]"],
+  "selectors": [
+    {
+      "id": "index",
+      "parentSelectors": ["_root"],
+      "type": "SelectorLink",
+      "selector": "a.sys-list__block",
+      "multiple": true,
+      "linkType": "linkFromHref"
+    },
+    {
+      "id": "title",
+      "parentSelectors": ["index"],
+      "type": "SelectorText",
+      "selector": "h1.sys-header__ttl",
+      "multiple": false,
+      "regex": ""
+    },
+    {
+      "id": "datetime",
+      "parentSelectors": ["index"],
+      "type": "SelectorText",
+      "selector": "div.sys-header__period",
+      "multiple": false,
+      "regex": ""
+    },
+    {
+      "id": "description",
+      "parentSelectors": ["index"],
+      "type": "SelectorText",
+      "selector": ".col-md-4 p",
+      "multiple": false,
+      "regex": ""
+    },
+    {
+      "id": "address",
+      "parentSelectors": ["index"],
+      "type": "SelectorText",
+      "selector": ".p-tbl__row:contains('場所') td",
+      "multiple": false,
+      "regex": ""
+    },
+    {
+      "id": "website",
+      "parentSelectors": ["index"],
+      "type": "SelectorText",
+      "selector": ".p-tbl__row:contains('関連サイト') td",
+      "multiple": false,
+      "regex": ""
+    },
+    {
+      "id": "thumbnail",
+      "parentSelectors": ["index"],
+      "type": "SelectorImage",
+      "selector": ".swiper-slide-visible img#ss_image",
+      "multiple": false
+    }
+  ]
+}
