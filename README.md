@@ -1,14 +1,8 @@
+<!-- filepath: /home/toyofumi/Project/opendata/README.md -->
+
 # opendata
 
-> \*\*Collect, Structure, and Sh### 🧠 Design Principles
-
-- **Modular**: One YAML configuration file per topic-country pair
-- **Scalable**: Easy to add new topics or countries by adding new configuration files
-- **Lightweight**: Files capped at 100MB to stay within GitHub's limits
-- **Auditable**: Every change is tracked with version control
-- **Centralized Config**: Country codes and other settings live in a shared `config/` folder
-- **Automated**: GitHub Actions handle all scheduled updates
-- **Declarative**: Data sources defined in YAML rather than code, making it easier to add new sources Web Data via GitHub Actions\*\*
+> **Collect, Structure, and Share Web Data via GitHub Actions**
 
 ## 📌 Project Overview
 
@@ -16,9 +10,10 @@
 
 ### 🎯 Purpose
 
-- Centralize public open data in a consistent and reusable CSV format.
-- Support cross-country comparisons by categorizing data per topic and per country.
-- Automate collection and updates via scheduled GitHub Actions.
+- Centralize public open data in a consistent and reusable CSV format
+- Support cross-country comparisons by categorizing data per topic and per country
+- Automate collection and updates via scheduled GitHub Actions
+- Use YAML configuration files to make adding new data sources easy and declarative
 
 ### 🚨 Problem Being Solved
 
@@ -42,20 +37,22 @@ Public data is fragmented across formats, languages, and domains. This project *
 - **Parsing**:
 
   - HTML: `requests`, `BeautifulSoup4`
+  - Scraper: `scrapy`
   - PDF: `pdfplumber`, `PyMuPDF`
   - Excel: `pandas`, `openpyxl`, `xlrd`
   - CSV: `pandas`
 
-- **Output Format**: `.csv` files under `data/`, named as `{topic}_{countryCode}.csv`
+- **Output Format**: `.csv` files under `data/{topic}/{yyyy}/{mm}/{dd}/`, named as `{countryCode}.csv`
 
 ### 🧠 Design Principles
 
-- **Modular**: One crawler per topic-country pair
-- **Scalable**: Easy to add new topics or countries
-- **Lightweight**: Files capped at 100MB to stay within GitHub’s limits
+- **Modular**: One configuration file per topic-country pair in `topics/<topic>/<countryCode>/index.yaml`
+- **Scalable**: Easy to add new topics or countries by adding new configuration files
+- **Lightweight**: Files capped at 100MB to stay within GitHub's limits
 - **Auditable**: Every change is tracked with version control
 - **Centralized Config**: Country codes and other settings live in a shared `config/` folder
 - **Automated**: GitHub Actions handle all scheduled updates
+- **Declarative**: Data sources defined in YAML rather than code, making it easier to add new sources
 
 ---
 
@@ -70,16 +67,24 @@ Public data is fragmented across formats, languages, and domains. This project *
 ### 📦 Setup Instructions
 
 ```bash
-git clone https://github.com/<your-org>/opendata.git
+# Clone the repository
+git clone https://github.com/iCyanCorporation/opendata.git
 cd opendata
+
+# Create and activate virtual environment
 python -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install required dependencies
 pip install -r requirements.txt
+
+# Initialize the project
+python init.py
 ```
 
 ### ⚙️ Environment Variables
 
-If needed, create a `.env` file:
+If needed for accessing certain APIs, you can create a `.env` file in the project root:
 
 ```ini
 API_KEY=your_api_key_here
@@ -108,15 +113,26 @@ python crawl_all.py
 This script will:
 
 - Read supported country codes from `config/countries.yaml`
-- Discover all topic folders and matching YAML configuration files
-- Run the appropriate crawler based on the source type specified in the YAML file
+- Discover all topic folders and matching YAML configuration files (`topics/<topic>/<countryCode>/index.yaml`)
+- Process data sources defined in each configuration file
 - Write output to `data/{topic}/{yyyy}/{mm}/{dd}/{countryCode}.csv`
+- Generate a status log file in the root folder (`crawl_status_log.md`)
 
 ### 🧪 Run Tests
 
 ```bash
 pytest tests/
 ```
+
+## 📊 Crawl Status Monitoring
+
+The project maintains a crawl status log file `crawl_status_log.md` in the root directory, which is automatically generated every time the data collection scripts are run. This file provides information about:
+
+- Which topics and countries were successfully crawled
+- Any errors or issues encountered during the crawling process
+- Timestamps for the most recent data updates
+
+This makes it easy to monitor the health of the data pipeline and identify any issues that need attention.
 
 ---
 
@@ -127,31 +143,46 @@ opendata/
 ├── config/
 │   └── countries.yaml              # ISO codes and country metadata
 ├── core/
-│   ├── html.py                     # Shared HTML parsing utilities
-│   ├── pdf.py
-│   └── excel.py
+│   ├── data_collector.py          # Main data collection logic
+│   ├── html.py                    # HTML parsing utilities
+│   ├── pdf.py                     # PDF processing utilities
+│   ├── excel.py                   # Excel processing utilities
+│   └── scraper.py                 # Web scraping functionality
 ├── data/
+│   ├── education/
+│   │   └── 2025/
+│   │       └── 05/
+│   │           └── 21/
+│   │               ├── us.csv
+│   │               └── jp.csv
 │   └── health/
 │       └── 2025/
 │           └── 05/
 │               └── 21/
 │                   ├── us.csv
-│                   └── ja.csv
+│                   └── jp.csv
 ├── topics/
-│   ├── health/
-│   │   ├── us.yaml                 # Configuration for US health data
-│   │   └── ja.yaml                 # Configuration for Japan health data
-│   └── education/
-│       └── us.yaml                 # Configuration for US education data
-├── init.py                         # For first run
-├── crawl_all.py                    # Runs all crawlers daily
+│   ├── education/
+│   │   ├── us/
+│   │   │   └── index.yaml         # Configuration for US education data
+│   │   └── ja/
+│   │       ├── index.yaml         # Configuration for Japan education data
+│   │       └── test.json          # Test data
+│   └── health/
+│       ├── us/
+│       │   └── index.yaml         # Configuration for US health data
+│       └── ja/
+│           └── index.yaml         # Configuration for Japan health data
+├── init.py                         # Project initialization script
+├── crawl_all.py                    # Script to run all crawlers
+├── crawl_status_log.md             # Log file for crawl operations
 ├── requirements.txt
 ├── tests/
-├── .env
+│   └── test_basic.py
+├── docs/                           # Documentation folder
 └── .github/
     └── workflows/
         └── crawl.yml               # GitHub Action (runs daily)
-
 ```
 
 ---
@@ -181,48 +212,63 @@ Use this file to:
 
 ## 📄 YAML Configuration Format
 
-Each data source is defined by a YAML file in the format `topics/<topic>/<countryCode>.yaml`.
+Each data source is defined by a YAML file in the format `topics/<topic>/<countryCode>/index.yaml`.
 
 ### Example YAML Configuration
 
 ```yaml
-# topics/health/us.yaml
-source:
-  type: html # Can be: html, pdf, excel, csv
-  url: https://www.cdc.gov/nchs/fastats/health-expenditures.htm
-
-extraction:
-  selectors:
-    - name: "Health Expenditure"
-      selector: ".health-expenditure-value"
-    - name: "Per Capita Spending"
-      selector: ".per-capita-value"
-
-  # For table extraction
-  table_selector: "#health-data-table"
-  header_row: 0
-
+# topics/health/ja/index.yaml
+# Configuration for Japan health data
 metadata:
+  country_code: "JP"
+  topic: "health"
+  description: "Health expenditure data for Japan"
   year: 2025
-  source_name: "CDC"
   update_frequency: "annual"
+
+# Multiple data sources can be configured
+sources:
+  - name: "MHLW Health Statistics"
+    enabled: true
+    type: "html"
+    url: "https://www.mhlw.go.jp/english/database/db-hh/index.html"
+
+  - name: "Annual Health Report"
+    enabled: true
+    type: "pdf"
+    url: "https://www.mhlw.go.jp/english/wp/wp-hw/index.html"
+
+  - name: "Health Insurance Statistics"
+    enabled: true
+    type: "excel"
+    url: "https://www.mhlw.go.jp/english/database/excel/health_insurance_2023.xlsx"
 ```
 
 ### Source Types and Required Fields
 
-| Source Type | Required Fields                                              | Description                        |
-| ----------- | ------------------------------------------------------------ | ---------------------------------- |
-| `html`      | `url`, `extraction.selectors` or `extraction.table_selector` | For crawling HTML pages            |
-| `pdf`       | `url`                                                        | For extracting data from PDF files |
-| `excel`     | `url`, `extraction.sheet_name`                               | For processing Excel spreadsheets  |
-| `csv`       | `url`                                                        | For direct CSV downloads           |
+Each source in the YAML configuration has the following structure:
+
+```yaml
+- name: "Source Name"
+  enabled: true|false # Whether this source should be processed
+  type: "html|pdf|excel|csv"
+  url: "https://example.com/data-source"
+```
+
+| Source Type | Description                                                 |
+| ----------- | ----------------------------------------------------------- |
+| `html`      | For crawling a HTML page using BeautifulSoup                |
+| `scraper`   | For crawling pages using Scrapy as webs craper              |
+| `pdf`       | For extracting data from PDF files using pdfplumber/PyMuPDF |
+| `excel`     | For processing Excel spreadsheets using pandas              |
+| `csv`       | For direct CSV downloads processed by pandas                |
 
 ---
 
 ## 📏 Naming & Formatting Conventions
 
-- **CSV File Naming**: `{countryCode}.csv`
-- **YAML Config Naming**: `{countryCode}.yaml`
+- **CSV File Naming**: `{countryCode}.csv` in date-structured folders
+- **YAML Config Naming**: `index.yaml` within country-specific folders
 - **Code Format**: `black`
 - **Linting**: `ruff`
 
@@ -233,7 +279,7 @@ metadata:
 ### 🌱 How to Contribute
 
 1. Fork the repository
-2. Add or update a configuration YAML file in `topics/<topic>/{countryCode}.yaml`
+2. Add or update a configuration YAML file in `topics/<topic>/<countryCode>/index.yaml`
 3. The crawler will automatically save output to `data/{topic}/{yyyy}/{mm}/{dd}/{countryCode}.csv`
 4. Ensure the file is under 100MB
 5. Open a PR and follow the review process
@@ -245,7 +291,7 @@ metadata:
 
 ### ✅ PR Checklist
 
-- [ ] YAML configuration file added or updated
+- [ ] YAML configuration file added or updated in the correct location
 - [ ] Output CSV placed correctly under `data/` when tested locally
 - [ ] File size < 100MB
 - [ ] `config/countries.yaml` updated (if new country)
@@ -276,7 +322,7 @@ Open a GitHub Issue for:
 ## 🛣️ Roadmap
 
 - [x] Modular data source configuration via YAML
-- [ ] Standardized CSV naming `{topic}_{countryCode}.csv`
+- [x] Date-based output structure `data/{topic}/{yyyy}/{mm}/{dd}/{countryCode}.csv`
 - [x] Central `config/` folder for settings
 - [x] GitHub Actions automation
 - [ ] Web frontend for browsing datasets
