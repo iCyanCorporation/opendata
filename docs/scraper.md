@@ -133,6 +133,7 @@ Fields specific to event data:
 | `participant_limit`  | Integer   | Maximum number of participants allowed   | `100`                                  |
 | `application_method` | String    | How to apply for the event               | `"Apply via website or call directly"` |
 | `target_audience`    | String    | Target audience or participants          | `"Parents with children ages 5-12"`    |
+| `event_format`       | String    | Whether the event is in-person or online | `"online"`, `"offline"`, `"hybrid"`    |
 
 ## Technical Fields
 
@@ -181,12 +182,13 @@ Fields for technical metadata:
   "price": 0,
   "participant_limit": 200,
   "application_method": "Registration required on the website",
-  "target_audience": "University administrators and education researchers"
+  "target_audience": "University administrators and education researchers",
+  "event_format": "hybrid"
 }
 ```
 
 ### CSV Headers Example
 
 ```
-id,source_name,source_url,event_time,country_code,topic,language,status,meeting_address,lecturer,organizer,price,participant_limit,application_method,target_audience
+id,source_name,source_url,event_time,country_code,topic,language,status,meeting_address,lecturer,organizer,price,participant_limit,application_method,target_audience,event_format
 ```
