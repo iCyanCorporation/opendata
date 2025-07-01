@@ -2,17 +2,17 @@
 
 # opendata
 
-> **Collect, Structure, and Share Web Data via GitHub Actions**
+> **Collect, Structure, and Share Web Data**
 
 ## 📌 Project Overview
 
-**opendata** is an automated, topic- and country-aware data pipeline that **crawls public data sources** (HTML, PDFs, Excel, CSV, etc.) from the internet and saves them in **CSV files categorized by topic and country** under a GitHub-hosted repository. All data is refreshed and published using GitHub Actions.
+**opendata** is an automated, topic- and country-aware data pipeline that **crawls public data sources** (HTML, PDFs, Excel, CSV, etc.) from the internet and saves them in **CSV files categorized by topic and country** under a GitHub-hosted repository.
 
 ### 🎯 Purpose
 
 - Centralize public open data in a consistent and reusable CSV format
 - Support cross-country comparisons by categorizing data per topic and per country
-- Automate collection and updates via scheduled GitHub Actions
+- Automate collection and updates
 - Use YAML configuration files to make adding new data sources easy and declarative
 
 ### 🚨 Problem Being Solved
@@ -33,7 +33,7 @@ Public data is fragmented across formats, languages, and domains. This project *
 ### 🧱 Tech Stack
 
 - **Language**: Python 3.11+
-- **Automation**: GitHub Actions
+- **Automation**: ON YOUR OWN
 - **Parsing**:
 
   - HTML: `requests`, `BeautifulSoup4`
@@ -51,7 +51,7 @@ Public data is fragmented across formats, languages, and domains. This project *
 - **Lightweight**: Files capped at 100MB to stay within GitHub's limits
 - **Auditable**: Every change is tracked with version control
 - **Centralized Config**: Country codes and other settings live in a shared `config/` folder
-- **Automated**: GitHub Actions handle all scheduled updates
+- **Automated**: Handle all scheduled updates
 - **Declarative**: Data sources defined in YAML rather than code, making it easier to add new sources
 
 ---
@@ -482,7 +482,6 @@ Open a GitHub Issue for:
 - [x] Modular data source configuration via YAML
 - [x] Date-based output structure `data/{topic}/{yyyy}/{mm}/{dd}/{countryCode}.csv`
 - [x] Central `config/` folder for settings
-- [x] GitHub Actions automation
 - [ ] Web frontend for browsing datasets
 - [ ] Auto-documentation of available datasets
 - [ ] Language localization support
